@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0100)http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    prog_guide:how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2010-12-21T18:35:52+0000">
+<meta name="keywords" content="prog_guide,how_to_develop_retinadisplay_games_in_cocos2d">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.cocos2d-iphone.org/wiki/lib/exe/opensearch.php" title="cocos2d for iPhone">
+<link rel="start" href="http://www.cocos2d-iphone.org/wiki/">
+<link rel="contents" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.cocos2d-iphone.org/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.cocos2d-iphone.org/wiki/feed.php?mode=list&ns=prog_guide">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=export_xhtml">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=export_raw">
+<link rel="canonical" href="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone.htm">
+<link rel="stylesheet" media="screen" type="text/css" href="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/css.php">
+<link rel="stylesheet" media="all" type="text/css" href="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/css(1).php">
+<link rel="stylesheet" media="print" type="text/css" href="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/css(2).php">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+var NS='prog_guide';var JSINFO = {"id":"prog_guide:how_to_develop_retinadisplay_games_in_cocos2d","namespace":"prog_guide"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/js.php"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+//--><!]]></script><script src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var pageTracker = _gat._getTracker("UA-871936-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+//--><!]]></script>
+
+  <link rel="shortcut icon" href="http://www.cocos2d-iphone.org/wiki/lib/tpl/A_Centered_Perspective/images/favicon.ico">
+
+  
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+<body class="dw-left">
+<div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+
+<div id="menubar" class="dokuwiki">   
+   
+		<a href="http://www.cocos2d-iphone.org/wiki/doku.php/" name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle">cocos2d for iPhone</a>		<form action="http://www.cocos2d-iphone.org/wiki/doku.php/" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>		 
+            <div class="action-menus">
+        <div class="action-menu">
+			<div class="action-menu-title">
+				⚙
+			</div>
+			<div class="action-menu-content">
+          <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=edit&rev=" class="action source" accesskey="v" rel="nofollow" title="Show pagesource">Show pagesource</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions">Old revisions</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=backlink" class="action backlink" accesskey="" rel="nofollow" title="Backlinks">Backlinks</a>			</div>
+        </div>
+        <div class="action-menu">
+        <div class="action-menu-title">
+			⚒
+		</div>
+		<div class="action-menu-content"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes">Recent changes</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap">Sitemap</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d?do=login&sectok=0938ca5b2a987045f28dcadbcdcb6d9e" class="action login" accesskey="" rel="nofollow" title="Login">Login</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="wrapper" class="dokuwiki">
+
+    	
+
+
+    
+
+
+      
+
+    
+    
+    
+              <div class="left-sidebar">
+			<div class="menu">
+		  		<ul>
+
+</ul>
+			</div>
+          <div class="main_sidebar sidebar-box">
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/resources:official-cocos-icon-angry.png?id=wiki%3Asidebar" class="media" title="resources:official-cocos-icon-angry.png"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/resources-official-cocos-icon-angry.png" class="media" alt="" width="64"></a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/start" class="wikilink1" title="start">Wiki Home</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="wikilink1" title="prog_guide:index">Programming Guide</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/" class="urlextern" title="http://www.cocos2d-iphone.org" rel="nofollow">Blog</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/forum" class="urlextern" title="http://www.cocos2d-iphone.org/forum" rel="nofollow">Forum</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/games" class="urlextern" title="http://www.cocos2d-iphone.org/games" rel="nofollow">Games</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/store" class="urlextern" title="http://www.cocos2d-iphone.org/store" rel="nofollow">Store</a>
+</p>
+
+</div>
+        </div>
+        <div class="right-page">
+          <div id="page"><!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header" style="cursor: pointer; "><span id="toc__toggle" style="cursor: pointer; " class="toc_close"><span>−</span></span>Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="clear">
+
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#who_should_read_this" class="toc">Who should read this</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#retinadisplay_in_cocos2d" class="toc">RetinaDisplay in cocos2d</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#introduction" class="toc">Introduction</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#point_vs_pixel" class="toc">Point vs. Pixel</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#the_api_in_points" class="toc">The API in Points</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#when_should_you_use_points_and_when_pixels" class="toc">When should you use Points, and when Pixels</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#the_-hd_suffix" class="toc">The -hd suffix</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#enabling_retina_display_mode" class="toc">Enabling Retina Display mode</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d#ccnode_details" class="toc">CCNode details</a></span></div></li></ul>
+</li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h2 class="sectionedit1"><a name="who_should_read_this" id="who_should_read_this">Who should read this</a></h2>
+<div class="level2">
+
+<p>
+
+This guide is for those of you who want to create a RetinaDisplay game. The game might also support the low-res too.
+</p>
+
+<p>
+This guide is valid for cocos2d v0.99.5-rc0 or newer. This document is not valid for previous cocos2d versions.
+</p>
+
+</div>
+
+<h2 class="sectionedit2"><a name="retinadisplay_in_cocos2d" id="retinadisplay_in_cocos2d">RetinaDisplay in cocos2d</a></h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit3"><a name="introduction" id="introduction">Introduction</a></h3>
+<div class="level3">
+
+<p>
+The entire cocos2d <acronym title="Application Programming Interface">API</acronym> was converted to Points. Previous versions were using Pixels.
+</p>
+
+<p>
+cocos2d v0.99.4 has RetinaDisplay support, however it required you to use two different sets of positions depending on the device , since the <acronym title="Application Programming Interface">API</acronym> was in Pixels.
+</p>
+
+<p>
+For example to position an sprite on the top-right corner, you had to do:
+
+</p>
+<pre class="code objc"><span class="co2">// in v0.99.4</span>
+<span class="kw1">if</span><span class="br0">(</span> iPhone4isUsed<span class="br0">)</span>
+   sprite.position <span class="sy0">=</span> ccp<span class="br0">(</span><span class="nu0">960</span>,<span class="nu0">640</span><span class="br0">)</span>;
+<span class="kw1">else</span>
+   sprite.position <span class="sy0">=</span> ccp<span class="br0">(</span><span class="nu0">480</span>,<span class="nu0">320</span><span class="br0">)</span>;</pre>
+
+<p>
+But in v0.99.5-rc0 (and newer) the only thing that you have to do is:
+
+</p>
+<pre class="code objc"><span class="co2">// v0.99.5</span>
+sprite.position <span class="sy0">=</span> ccp<span class="br0">(</span><span class="nu0">480</span>,<span class="nu0">320</span><span class="br0">)</span>;</pre>
+
+</div>
+
+<h3 class="sectionedit4"><a name="point_vs_pixel" id="point_vs_pixel">Point vs. Pixel</a></h3>
+<div class="level3">
+
+<p>
+
+What is a pixel ? A pixel according to wikipedia is this: <a href="http://en.wikipedia.org/wiki/Pixel" class="urlextern" title="http://en.wikipedia.org/wiki/Pixel" rel="nofollow">http://en.wikipedia.org/wiki/Pixel</a>.
+</p>
+
+<p>
+The difference between Pixels and Points is that the <strong>logical coordinate space</strong> is measured in <strong>Points</strong>, while the <strong>device coordinate space</strong> is measured in <strong>Pixels</strong>.
+</p>
+
+<p>
+Example:
+</p>
+<div class="table sectionedit5"><table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0"> Device </th><th class="col1"> Points </th><th class="col2"> Pixels </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> iPhone 3GS or older [1] </td><td class="col1"> 480×320 </td><td class="col2"> 480×320 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> iPhone4  in LowRes mode [2] </td><td class="col1"> 480×320 </td><td class="col2"> 480×320 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> <strong>iPhone4  in HighRes mode [2]</strong> </td><td class="col1"> <strong>480×320</strong> </td><td class="col2"> <strong>960×640</strong> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> iPad </td><td class="col1"> 1024×768 </td><td class="col2"> 1024×768 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Mac </td><td class="col1"> W x H </td><td class="col2"> W x H </td>
+	</tr>
+</tbody></table></div>
+
+<p>
+
+[1]: It is also valid for iPod Touch 3rd generation and older devices
+</p>
+
+<p>
+[2]: It is also valid for iPod Touch 4th generation
+</p>
+
+<p>
+So, only on iPhone4 when HighRes mode is enabled 1 Point == 4 pixels (2×2 pixels), otherwise 1 Point == 1 Pixel.
+</p>
+
+</div>
+
+<h3 class="sectionedit6"><a name="the_api_in_points" id="the_api_in_points">The API in Points</a></h3>
+<div class="level3">
+
+<p>
+
+As mentioned previously, in v0.99.5 the <acronym title="Application Programming Interface">API</acronym> is in points, it means that:
+
+</p>
+<pre class="code objc">   <span class="co2">// director</span>
+   CCDirector <span class="sy0">*</span> director <span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span>;
+   CGSize sizeA <span class="sy0">=</span> <span class="br0">[</span>director winSize<span class="br0">]</span>; <span class="co2">// is in Points</span>
+   CGSize sizeB <span class="sy0">=</span> <span class="br0">[</span>director winSizeInPixels<span class="br0">]</span>; <span class="co2">// in Pixels</span>
+   CGSize sizeA <span class="sy0">=</span> <span class="br0">[</span>director displaySize<span class="br0">]</span>; <span class="co2">// is in Points</span>
+   CGSize sizeB <span class="sy0">=</span> <span class="br0">[</span>director displaySizeInPixels<span class="br0">]</span>; <span class="co2">// in Pixels</span>
+&nbsp;
+   <span class="co2">// Node</span>
+   CCNode <span class="sy0">*</span>node <span class="sy0">=</span> <span class="br0">[</span>...<span class="br0">]</span>;
+   CGPoint posA <span class="sy0">=</span> <span class="br0">[</span>node position<span class="br0">]</span>;  <span class="co2">// is in Points</span>
+   CGPoint posB <span class="sy0">=</span> <span class="br0">[</span>node positionInPixels<span class="br0">]</span>; <span class="co2">// is in Pixels</span>
+   CGSize sizeA <span class="sy0">=</span> <span class="br0">[</span>node contentSize<span class="br0">]</span>; <span class="co2">// is in points</span>
+   CGSize sizeB <span class="sy0">=</span> <span class="br0">[</span>node contentSizeInPixels<span class="br0">]</span>; <span class="co2">// is in pixels</span>
+   CGRect rectA <span class="sy0">=</span> <span class="br0">[</span>node boundingBox<span class="br0">]</span>; <span class="co2">// is in Points</span>
+   CGSize rectB <span class="sy0">=</span> <span class="br0">[</span>node boundingBoxInPixels<span class="br0">]</span>; <span class="co2">// is in pixels</span>
+&nbsp;
+   <span class="co2">// Sprite</span>
+    CCSprite <span class="sy0">*</span>sprite <span class="sy0">=</span> <span class="br0">[</span>...<span class="br0">]</span>;
+    CGRect rectA <span class="sy0">=</span> <span class="br0">[</span>sprite rect<span class="br0">]</span>;
+    CGRect rectB <span class="sy0">=</span> <span class="br0">[</span>sprite rectInPixels<span class="br0">]</span>; </pre>
+
+<p>
+This is also valid for the <em>setters</em>. eg:
+
+</p>
+<pre class="code objc">   <span class="br0">[</span>sprite setPosition<span class="sy0">:</span>ccp<span class="br0">(</span>x,y<span class="br0">)</span><span class="br0">]</span>; <span class="co2">// in Points</span>
+   <span class="br0">[</span>sprite setPositionInPixels<span class="sy0">:</span><span class="br0">(</span>x,y<span class="br0">)</span><span class="br0">]</span> <span class="co2">// in Pixels</span></pre>
+
+<p>
+etc… The methods are ONLY in pixels if the methods or properties end with the “InPixels” suffix. If they don't have that suffix it means that they use Points.
+
+</p>
+
+</div>
+
+<h3 class="sectionedit7"><a name="when_should_you_use_points_and_when_pixels" id="when_should_you_use_points_and_when_pixels">When should you use Points, and when Pixels</a></h3>
+<div class="level3">
+
+<p>
+
+95% of the time you will want to use the Point <acronym title="Application Programming Interface">API</acronym>, but there are special cases when you might need to use the Pixel <acronym title="Application Programming Interface">API</acronym>.
+</p>
+
+<p>
+Some of cocos2d's complex objects use the Pixel <acronym title="Application Programming Interface">API</acronym>. eg: `CCSprite`, `CCTMXLayer`, `CCLabelBMFont`.
+</p>
+
+<p>
+So, you might need to use the Pixel <acronym title="Application Programming Interface">API</acronym> if you are developing a complex object, specially if you need to parse a data file that has values in pixels.
+
+</p>
+
+</div>
+
+<h3 class="sectionedit8"><a name="the_-hd_suffix" id="the_-hd_suffix">The -hd suffix</a></h3>
+<div class="level3">
+
+<p>
+
+Most likely, you'll want to have low-res images on iPhone 3GS and older devices, and high-res images on iPhone 4.
+</p>
+
+<p>
+Apple uses the ”@2x” suffix, but cocos2d doesn't use that extension because of some incompatibilities. So cocos2d has its own suffix: the ”-hd” suffix.
+</p>
+
+<p>
+If you want to use your own suffix, you can do it by editing the ccConfig.h file.
+</p>
+<pre class="code objc"><span class="co2">// Modify it to use your own suffix</span>
+<span class="co1">#define CC_RETINA_DISPLAY_FILENAME_SUFFIX @"-hd"</span></pre>
+
+<p>
+<strong>WARNING</strong>: It is <strong>NOT</strong> recommend to use the ”@2x” suffix. Apple treats those images in a special way which might cause some bugs in your cocos2d application.
+</p>
+
+<p>
+The only exception is the “Default@2x.png” image. Since cocos2d is not loaded at that time, you can use that image in order to have a High Res splash image.
+</p>
+
+<p>
+Each file opened by cocos2d (image file, config file, sprite sheet, etc…) is opened using the <code>CCFileUtils</code> class.
+When RetinaDisplay is enabled, this class will try to open the ”-hd” file instead. If that file doesn't exist, it will open the originally requested file.
+</p>
+
+<p>
+Example: If you try to open the file “sprite.png” when RetinaDisplay mode is enabled, then the following will happen:
+</p>
+<ol>
+<li class="level1"><div class="li"> Obtain the full path of “sprite.png” → ”/Volumes/XXX/sprite.png”</div>
+</li>
+<li class="level1"><div class="li"> Is the Application in Retina Display mode ?. If not, then return the fullpath name. If yes, then continue with step 3.</div>
+</li>
+<li class="level1"><div class="li"> Does “sprite.png” have the ”-hd” suffix ?</div>
+</li>
+<li class="level1"><div class="li"> In this case particular case, the answer is No, so it will try append the ”-hd” suffix to “sprite.png” → “sprite-hd.png”</div>
+</li>
+<li class="level1"><div class="li"> Does the HD image exist (”/Volumes/XXX/sprite-hd.png”) ?</div>
+</li>
+<li class="level1"><div class="li"> If it does exist it will use it, otherwise it will use the non-hd image</div>
+</li>
+</ol>
+
+<p>
+Same example, but trying to open the file “sprites-hd.plist”
+</p>
+<ol>
+<li class="level1"><div class="li"> Obtain the full path of “sprites-hd.plist” → ”/Volumes/XXX/sprites-hd.plist”</div>
+</li>
+<li class="level1"><div class="li"> Is the Application in Retina Display mode ?. If not, then return the fullpath name. If yes, then continue with step 3.</div>
+</li>
+<li class="level1"><div class="li"> Does “sprites-hd.plist” have the ”-hd” suffix ?</div>
+</li>
+<li class="level1"><div class="li"> Yes. So, try to use it.</div>
+</li>
+</ol>
+
+<p>
+
+As you can see, the ”-hd” suffix is valid for any file: Images (.png, .gif, .bmp, etc), TMX files (.tmx, .png), BMFont files (.fnt, .png), Sprite sheets (.plist, .png).
+</p>
+
+<p>
+cocos2d, as of v0.99.5-rc0, doesn't support any other suffix, like an ”-ipad” suffix, but it will support it in the near future.
+</p>
+
+</div>
+
+<h3 class="sectionedit9"><a name="enabling_retina_display_mode" id="enabling_retina_display_mode">Enabling Retina Display mode</a></h3>
+<div class="level3">
+
+<p>
+You should enable RetinaDisplay mode <strong>ONLY</strong> if you want to use HighRes images on an iPhone4. Remember that an iPhone4 also works in “low res” mode.
+</p>
+<pre class="code objc"><span class="co2">// Add this code in your Application Delegate, right after initializing the director</span>
+&nbsp;
+<span class="co2">// Director Initialization</span>
+<span class="br0">[</span>director setOpenGLView<span class="sy0">:</span>glView<span class="br0">]</span>;
+&nbsp;
+<span class="co2">// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices</span>
+<span class="kw1">if</span><span class="br0">(</span> <span class="sy0">!</span> <span class="br0">[</span>director enableRetinaDisplay<span class="sy0">:</span><span class="kw2">YES</span><span class="br0">]</span> <span class="br0">)</span>
+	CCLOG<span class="br0">(</span><span class="co3">@</span><span class="st0">"Retina Display Not supported"</span><span class="br0">)</span>;</pre>
+
+</div>
+
+<h3 class="sectionedit10"><a name="ccnode_details" id="ccnode_details">CCNode details</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="ccnode" id="ccnode">CCNode</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> <code>position</code> is in points</div>
+</li>
+<li class="level1"><div class="li"> <code>positionInPixels</code> is in pixels</div>
+</li>
+<li class="level1"><div class="li"> <code>contentSize</code> is in points</div>
+</li>
+<li class="level1"><div class="li"> <code>cotentSizeInPixels</code> is in pixels</div>
+</li>
+<li class="level1"><div class="li"> <code>boundingBox</code> is in points</div>
+</li>
+<li class="level1"><div class="li"> <code>boundingBoxInPixels</code> is in pixels</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="cclabelatlas" id="cclabelatlas">CCLabelAtlas</a></h4>
+<div class="level4">
+
+<p>
+
+The <acronym title="Application Programming Interface">API</acronym> is in Points:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>+(id) labelWithString:(NSString*) string charMapFile: (NSString*) charmapfile itemWidth:(int)w itemHeight:(int)h startCharMap:(char)c;</code></div>
+</li>
+</ul>
+
+<p>
+
+It means that the width and height are in points. So, if you call this method when RetinaDisplay mode is enabled, you MUST have a -hd image.
+</p>
+
+<p>
+Quick way to create a “pseudo” high res image by using ImageMagick:
+
+</p>
+<pre class="code">$ convert fps_label.png -scale 200%  fps_label-hd.png</pre>
+
+<p>
+
+<strong>WARNING</strong>: You should <strong>NOT</strong> scale up a raster image. You won't gain quality. The above given example is a quick way to create an ”-hd” image so that you can test your game quickly.
+</p>
+
+</div>
+
+<h4><a name="cclabelbmfont" id="cclabelbmfont">CCLabelBMFont</a></h4>
+<div class="level4">
+
+<p>
+
+The <acronym title="Application Programming Interface">API</acronym> is in points, so if you want to have both a low res and high res version, you have to create a 2x file by using Hiero (or your favorite BMFont editor).
+</p>
+
+<p>
+Example: If have a low res BMFont called <em>times32.fnt</em>  (and <em>times32.png</em>) (Times New Roman font with a font size of 32), then you'll have to:
+</p>
+<ol>
+<li class="level1"><div class="li"> Create a Times New Roman file with a font size of 64.</div>
+</li>
+<li class="level1"><div class="li"> You should save this file: <em>times32-hd.fnt</em> (and <em>times32-hd.png</em>)</div>
+</li>
+</ol>
+
+<p>
+
+This will create REAL HighRes images.
+</p>
+
+</div>
+
+<h4><a name="tmx_maps" id="tmx_maps">TMX maps</a></h4>
+<div class="level4">
+
+<p>
+The <acronym title="Application Programming Interface">API</acronym> is in Points, so if you want to create a HighRes version you'll have to:
+
+</p>
+<ol>
+<li class="level1"><div class="li"> copy map.tmx to map-hd.tmx</div>
+</li>
+<li class="level1"><div class="li"> Edit “map-hd.tmx” and multiply by 2 the tile size and spacing in the tileset information like <code>tilewidth</code>, <code>tileheight</code>, <code>spacing</code> and <code>margin</code>.</div>
+</li>
+<li class="level1"><div class="li"> Then you'll have to create a HD version of the tileset image</div>
+</li>
+</ol>
+
+<p>
+
+Sample of <strong>map.tmx</strong>:
+</p>
+<pre class="code">&lt;map version="1.0" orientation="orthogonal" width="10" height="10" tilewidth="32" tileheight="32"&gt;
+ &lt;tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1"&gt;
+  &lt;image source="tileset.png"/&gt;
+ &lt;/tileset&gt;</pre>
+
+<p>
+
+Sample of <strong>map-hd.tmx</strong>:
+</p>
+<pre class="code">&lt;map version="1.0" orientation="orthogonal" width="10" height="10" tilewidth="64" tileheight="64"&gt;
+ &lt;tileset firstgid="1" name="Desert" tilewidth="64" tileheight="64" spacing="2" margin="2"&gt;
+  &lt;image source="tileset-hd.png"/&gt;
+ &lt;/tileset&gt;
+ </pre>
+
+<p>
+Quick way to create a “pseudo” high res image by using ImageMagick:
+</p>
+<pre class="code">$ convert tileset.png -scale 200% tileset-hd.png</pre>
+
+<p>
+
+<strong>WARNING</strong>: You should <strong>NOT</strong> scale up a raster image. You won't gain quality. The above given example is a quick way to create an ”-hd” image so that you can test your game quickly.
+</p>
+
+</div>
+
+<h4><a name="spritesheets_zwoptex_texturepacker_plist" id="spritesheets_zwoptex_texturepacker_plist">Spritesheets (Zwoptex / TexturePacker / .plist)</a></h4>
+<div class="level4">
+
+<p>
+
+You should generate the files (.plist and .png) again, this time using the high res sprites.
+Example: If you have generated your <em>spritesheet.plist</em> and <em>spritesheet.png</em>files  using the these 4 low-res images:
+</p>
+<ol>
+<li class="level1"><div class="li"> sprite1.png</div>
+</li>
+<li class="level1"><div class="li"> sprite2.png</div>
+</li>
+<li class="level1"><div class="li"> sprite3.png</div>
+</li>
+<li class="level1"><div class="li"> sprite4.png</div>
+</li>
+</ol>
+
+<p>
+
+Then you'll have to create an HD version of those 4 images. But you should NOT rename them. Instead, what you should do is to place the HD files in another directory. eg:
+</p>
+<pre class="code">$ mkdir hd_sprites
+$ convert sprite1.png -scale 200% hd_sprites/sprite1.png
+$ convert sprite2.png -scale 200% hd_sprites/sprite2.png
+$ convert sprite3.png -scale 200% hd_sprites/sprite3.png
+$ convert sprite4.png -scale 200% hd_sprites/sprite4.png</pre>
+
+<p>
+ Then you will have to generate the <em>spritesheet-hd.plist</em> and <em>spritesheet-hd.png</em> files from the sprites that are located in the “hd_sprites” subdirectory.
+</p>
+
+<p>
+<strong>WARNING</strong>: You should <strong>NOT</strong> scale up a raster image. You won't gain quality. The above given example is a quick way to create an ”-hd” image so that you can test your game quickly.
+</p>
+
+</div>
+
+<h4><a name="sprites" id="sprites">Sprites</a></h4>
+<div class="level4">
+
+<p>
+
+The sprite <acronym title="Application Programming Interface">API</acronym> is in points:
+</p>
+<ol>
+<li class="level1"><div class="li"> <code>-(id) initWithFile:(NSString*)filename rect:(CGRect)rect;</code></div>
+</li>
+<li class="level1"><div class="li"> The property <code>rect</code> is in points</div>
+</li>
+<li class="level1"><div class="li"> But the property <code>rectInPixels</code> is in pixels</div>
+</li>
+</ol>
+
+<p>
+
+So, if you are going to use this method, be sure to have an ”-hd” image, otherwise your sprite won't look good.
+</p>
+
+<p>
+Quick way to create a “pseudo” high res image by using ImageMagick:
+</p>
+<pre class="code">$ convert spritesheet.png -scale 200% spritesheet-hd.png</pre>
+
+<p>
+
+<strong>WARNING</strong>: You should <strong>NOT</strong> scale up a raster image. You won't gain quality. The above given example is a quick way to create an ”-hd” image so that you can test your game quickly.
+
+</p>
+
+</div>
+
+	
+	
+			<div class="meta">
+			  <div class="user">
+			  			  </div>
+			  <div class="doc">
+			  prog_guide/how_to_develop_retinadisplay_games_in_cocos2d.txt · Last modified: 2010/12/21 18:35 by dad			  </div>
+			</div>
+	
+	</div>
+        </div>
+      
+    
+
+
+     
+    <div id="trail">
+      <span class="bchead">Trace:</span> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:animation" class="breadcrumbs" title="prog_guide:animation">animation</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:sprites" class="breadcrumbs" title="prog_guide:sprites">sprites</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:labels" class="breadcrumbs" title="prog_guide:labels">labels</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps" class="breadcrumbs" title="prog_guide:tiled_maps">tiled_maps</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:particles" class="breadcrumbs" title="prog_guide:particles">particles</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:draw_update" class="breadcrumbs" title="prog_guide:draw_update">draw_update</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:social_networks" class="breadcrumbs" title="prog_guide:social_networks">social_networks</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:setup_buffers" class="breadcrumbs" title="prog_guide:setup_buffers">setup_buffers</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation" class="breadcrumbs" title="prog_guide:autorotation">autorotation</a> <span class="bcsep"></span> <span class="curid"><a href="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone.htm" class="breadcrumbs" title="prog_guide:how_to_develop_retinadisplay_games_in_cocos2d">how_to_develop_retinadisplay_games_in_cocos2d</a></span>    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+<div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/cc-by-nc-sa.png" class="medialeft licbutton" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a> </div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="http://www.cocos2d-iphone.org/wiki/feed.php" title="Recent changes RSS feed"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./prog_guide how_to_develop_retinadisplay_games_in_cocos2d – cocos2d for iPhone_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+
+<div class="no"><img src="http://www.cocos2d-iphone.org/wiki/lib/exe/indexer.php?id=prog_guide%3Ahow_to_develop_retinadisplay_games_in_cocos2d&1296483106" width="1" height="1" alt=""></div>
+
+
+</body></html>

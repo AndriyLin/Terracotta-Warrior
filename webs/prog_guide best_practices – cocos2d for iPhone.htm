@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0069)http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    prog_guide:best_practices – cocos2d for iPhone  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2010-11-12T03:52:13+0000">
+<meta name="keywords" content="prog_guide,best_practices">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.cocos2d-iphone.org/wiki/lib/exe/opensearch.php" title="cocos2d for iPhone">
+<link rel="start" href="http://www.cocos2d-iphone.org/wiki/">
+<link rel="contents" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.cocos2d-iphone.org/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.cocos2d-iphone.org/wiki/feed.php?mode=list&ns=prog_guide">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=export_xhtml">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=export_raw">
+<link rel="canonical" href="./prog_guide best_practices – cocos2d for iPhone_files/prog_guide best_practices – cocos2d for iPhone.htm">
+<link rel="stylesheet" media="screen" type="text/css" href="./prog_guide best_practices – cocos2d for iPhone_files/css.php">
+<link rel="stylesheet" media="all" type="text/css" href="./prog_guide best_practices – cocos2d for iPhone_files/css(1).php">
+<link rel="stylesheet" media="print" type="text/css" href="./prog_guide best_practices – cocos2d for iPhone_files/css(2).php">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+var NS='prog_guide';var JSINFO = {"id":"prog_guide:best_practices","namespace":"prog_guide"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="./prog_guide best_practices – cocos2d for iPhone_files/js.php"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+//--><!]]></script><script src="./prog_guide best_practices – cocos2d for iPhone_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var pageTracker = _gat._getTracker("UA-871936-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+//--><!]]></script>
+
+  <link rel="shortcut icon" href="http://www.cocos2d-iphone.org/wiki/lib/tpl/A_Centered_Perspective/images/favicon.ico">
+
+  
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+<body class="dw-left">
+<div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+
+<div id="menubar" class="dokuwiki">   
+   
+		<a href="http://www.cocos2d-iphone.org/wiki/doku.php/" name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle">cocos2d for iPhone</a>		<form action="http://www.cocos2d-iphone.org/wiki/doku.php/" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>		 
+            <div class="action-menus">
+        <div class="action-menu">
+			<div class="action-menu-title">
+				⚙
+			</div>
+			<div class="action-menu-content">
+          <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=edit&rev=" class="action source" accesskey="v" rel="nofollow" title="Show pagesource">Show pagesource</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions">Old revisions</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=backlink" class="action backlink" accesskey="" rel="nofollow" title="Backlinks">Backlinks</a>			</div>
+        </div>
+        <div class="action-menu">
+        <div class="action-menu-title">
+			⚒
+		</div>
+		<div class="action-menu-content"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes">Recent changes</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap">Sitemap</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices?do=login&sectok=0938ca5b2a987045f28dcadbcdcb6d9e" class="action login" accesskey="" rel="nofollow" title="Login">Login</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="wrapper" class="dokuwiki">
+
+    	
+
+
+    
+
+
+      
+
+    
+    
+    
+              <div class="left-sidebar">
+			<div class="menu">
+		  		<ul>
+
+</ul>
+			</div>
+          <div class="main_sidebar sidebar-box">
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/resources:official-cocos-icon-angry.png?id=wiki%3Asidebar" class="media" title="resources:official-cocos-icon-angry.png"><img src="./prog_guide best_practices – cocos2d for iPhone_files/resources-official-cocos-icon-angry.png" class="media" alt="" width="64"></a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/start" class="wikilink1" title="start">Wiki Home</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="wikilink1" title="prog_guide:index">Programming Guide</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/" class="urlextern" title="http://www.cocos2d-iphone.org" rel="nofollow">Blog</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/forum" class="urlextern" title="http://www.cocos2d-iphone.org/forum" rel="nofollow">Forum</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/games" class="urlextern" title="http://www.cocos2d-iphone.org/games" rel="nofollow">Games</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/store" class="urlextern" title="http://www.cocos2d-iphone.org/store" rel="nofollow">Store</a>
+</p>
+
+</div>
+        </div>
+        <div class="right-page">
+          <div id="page"><!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header" style="cursor: pointer; "><span id="toc__toggle" style="cursor: pointer; " class="toc_close"><span>−</span></span>Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#cocos2d_best_practices" class="toc">cocos2d Best Practices</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#improving_performance" class="toc">Improving performance</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#xcode_thumb" class="toc">Xcode Thumb</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#ccdirector" class="toc">CCDirector</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#texture_atlas" class="toc">Texture Atlas</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#textures" class="toc">Textures</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#particles" class="toc">Particles</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#reducing_memory" class="toc">Reducing Memory</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#timers" class="toc">Timers</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#draw_vs_update" class="toc">Draw vs. update</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#director_flow_control" class="toc">Director flow control</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#creating_nodes_ccsprite_cclabel_etc" class="toc">Creating Nodes (CCSprite, CCLabel, etc..)</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#hierarchy_of_layers" class="toc">Hierarchy of Layers</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#actions" class="toc">Actions</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#buttons" class="toc">Buttons</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices#how_does_the_pause_resume_works" class="toc">How does the pause/resume works ?</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1"><a name="cocos2d_best_practices" id="cocos2d_best_practices">cocos2d Best Practices</a></h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2"><a name="improving_performance" id="improving_performance">Improving performance</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Use this guide as reference: <a href="http://www.cocos2d-iphone.org/wiki/doku.php/perf_test:index" class="wikilink1" title="perf_test:index">performance tests</a></div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit3"><a name="xcode_thumb" id="xcode_thumb">Xcode Thumb</a></h3>
+<div class="level3">
+
+<p>
+Turn off thumb compilation in XCode for ARMv6, but turn it on for ARMv7.
+</p>
+<ul>
+<li class="level1"><div class="li"> Thumb compiling creates smaller compiled sizes at the threat to floating point math </div>
+</li>
+<li class="level1"><div class="li"> Thumb code is MUCH slower than the non-thumb code</div>
+</li>
+<li class="level1"><div class="li"> Instructions to change this setting on a project <a href="http://cocoaswirl.com/2009/05/20/iphone-opengl-speed-tip-turn-off-thumb-instructions/" class="urlextern" title="http://cocoaswirl.com/2009/05/20/iphone-opengl-speed-tip-turn-off-thumb-instructions/" rel="nofollow">can be found here.</a></div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit4"><a name="ccdirector" id="ccdirector">CCDirector</a></h3>
+<div class="level3">
+
+<p>
+Director:
+</p>
+<ul>
+<li class="level1"><div class="li"> Use <code>DisplayLink</code>. <code>DisplayLink</code> is the best Director, but is only available in <acronym title="Software Development Kit">SDK</acronym> 3.1 or higher. If <code>DisplayLink</code> is not present, use <code>MainLoop</code> or <code>ThreadMainLoop</code>.</div>
+</li>
+</ul>
+<pre class="code objc"><span class="co2">// must be called before any other call to the director</span>
+<span class="kw1">if</span><span class="br0">(</span> <span class="sy0">!</span> <span class="br0">[</span>CCDirector setDirectorType<span class="sy0">:</span>kCCDirectorTypeDisplayLink<span class="br0">]</span> <span class="br0">)</span>
+	<span class="br0">[</span>CCDirector setDirectorType<span class="sy0">:</span>kCCDirectorTypeMainLoop<span class="br0">]</span>;</pre>
+<ul>
+<li class="level1"><div class="li"> Or use <em>NSTimer</em> <code>CCDirector</code> with a very low (quick) interval like 1/240</div>
+</li>
+</ul>
+<pre class="code objc"><span class="co2">// If you are using "NSTimer" Director you could set a very low interval</span>
+<span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> setAnimationInterval<span class="sy0">:</span><span class="nu0">1</span><span class="sy0">/</span><span class="nu0">240.0</span><span class="br0">]</span>;</pre>
+
+</div>
+
+<h3 class="sectionedit5"><a name="texture_atlas" id="texture_atlas">Texture Atlas</a></h3>
+<div class="level3">
+
+<p>
+When possible try to use texture atlas:
+</p>
+<ul>
+<li class="level1"><div class="li"> Make <code>CCSprite</code> from a corresponding <code>CCSpriteSheet</code> spritesheet object.</div>
+</li>
+<li class="level1"><div class="li"> Use <code>CCLabelBMFont</code> or <code>CCLabelAtlas</code> instead of <code>CCLabelTTF</code></div>
+</li>
+<li class="level1"><div class="li"> Use <code>CCTMXTileMap</code> or <code>CCTileMapAtlas</code> to render tiles</div>
+</li>
+</ul>
+
+<p>
+    The Atlas versions of these objects provide faster rendering at the expense of code and art complexity.  The Atlas versions utilize an AtlasManager that keeps one large image with multiple frames, and the individual Atlas object refer to a frame of that larger image.  This saves on texture counts and accelerates OpenGL ES calls.
+</p>
+
+<p>
+Atlas = a book of illustration or diagrams. In this context it means you have one big image loaded into an opengl texture which actually holds a series of smaller images. As opposed to all the smaller images each loaded in to their own texture. 
+
+</p>
+
+</div>
+
+<h3 class="sectionedit6"><a name="textures" id="textures">Textures</a></h3>
+<div class="level3">
+
+<p>
+
+When possible, try to use 4-bit or 16-bit textures
+</p>
+<ul>
+<li class="level1"><div class="li"> 16-bit textures for <acronym title="Portable Network Graphics">PNG</acronym>/<acronym title="Graphics Interchange Format">GIF</acronym>/BMP/<acronym title="Tagged Image File Format">TIFF</acronym> images</div>
+</li>
+<li class="level2"><div class="li"> 4-bit or 2-bit textures: Try to use PVRTC textures.</div>
+</li>
+<li class="level2"><div class="li"> Use 32-bit textures as the last resort</div>
+</li>
+</ul>
+
+<p>
+
+Add this line before loading Textures:
+
+</p>
+<pre class="code objc"><span class="br0">[</span>Texture2D setDefaultAlphaPixelFormat<span class="sy0">:</span>kTexture2DPixelFormat_RGBA4444<span class="br0">]</span>; <span class="co2">// add this line at the very beginning</span></pre>
+
+<p>
+For background images you can drop the alpha channel by using RGB565 format. This format has the advantage that the visual quality is better than using RGBA4444.
+</p>
+
+<p>
+Simply reducing the color by setting the pixel format has the disadvantage of quality loss and the size of the resources still stays big.
+</p>
+
+<p>
+<strong> Dithering </strong>
+TODO: explain dithering.
+</p>
+
+<p>
+<strong> PVR textures </strong>
+TODO: explain the benefits of PVR
+TODO: explain .pvr.gz / .pvr.ccz
+</p>
+
+<p>
+The PVR format lets you create RGBA8888, RGBA4444, RGBA5551 and RGB565 textures
+</p>
+
+<p>
+<strong>Using PVR-Sprites:</strong>
+</p>
+<pre class="code objc">Sprite <span class="sy0">*</span>sprite <span class="sy0">=</span> <span class="br0">[</span>Sprite spriteWithFile<span class="sy0">:</span> <span class="co3">@</span><span class="st0">"sprite.pvr"</span><span class="br0">]</span>;</pre>
+
+</div>
+
+<h3 class="sectionedit7"><a name="particles" id="particles">Particles</a></h3>
+<div class="level3">
+
+<p>
+ * There are 2 type of particles: Quad and Point particle system.
+ * Point particle system seems to be a little bit faster on 1st and 2nd gen devices, but it is much slower on 3rd gen devices / iPad.
+</p>
+
+<p>
+So, either you can check the device at runtime, or, the “lazy” approach would be to use Quad Particle.
+</p>
+
+</div>
+
+<h2 class="sectionedit8"><a name="reducing_memory" id="reducing_memory">Reducing Memory</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Use 16-bit or 4-bit textures (see Improving performance)</div>
+</li>
+<li class="level1"><div class="li"> Use the <code>CCTextureCache</code></div>
+<ul>
+<li class="level2"><div class="li"> <code>CCTextureCache</code> caches all images</div>
+</li>
+<li class="level2"><div class="li"> Even when the image is not used anymore, it will remain in memory</div>
+</li>
+<li class="level2"><div class="li"> To remove it from memory do:</div>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="code objc"><span class="co2">// textures with retain count 1 will be removed</span>
+<span class="co2">// you can add this line in your scene#dealloc method</span>
+<span class="br0">[</span><span class="br0">[</span>CCTextureCache sharedTextureCache<span class="br0">]</span> removeUnusedTextures<span class="br0">]</span>; <span class="co2">// since v0.8</span>
+&nbsp;
+<span class="co2">// removes a certain texture from the cache</span>
+CCTexture2D <span class="sy0">*</span>texture <span class="sy0">=</span> <span class="br0">[</span>sprite texture<span class="br0">]</span>;
+<span class="br0">[</span><span class="br0">[</span>CCTextureCache sharedTextureCache<span class="br0">]</span> removeTexture<span class="sy0">:</span> texture<span class="br0">]</span><span class="br0">]</span>; <span class="co2">// available in v0.7 too</span>
+&nbsp;
+<span class="co2">// removes all textures... only use when you receive a memory warning signal</span>
+<span class="br0">[</span><span class="br0">[</span>CCTextureCache sharedTextureCache<span class="br0">]</span> removeAllTextures<span class="br0">]</span>;    <span class="co2">// available in v0.7 too</span></pre>
+
+</div>
+
+<h2 class="sectionedit9"><a name="timers" id="timers">Timers</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Try <strong>NOT</strong> to use Cocoa’s <code>NSTimer</code>. Instead use cocos2d’s own scheduler.</div>
+</li>
+<li class="level1"><div class="li"> If you use cocos2d scheduler, you will have:</div>
+<ul>
+<li class="level2"><div class="li"> automatic pause/resume.</div>
+</li>
+<li class="level2"><div class="li"> when the CCLayer (CCScene, CCSprite, CCNode) enters the stage the timer will be automatically activated, and when it leaves the stage it will be automatically deactivated.</div>
+</li>
+<li class="level2"><div class="li"> Your target/selector will be called with a delta time</div>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="code objc"><span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// OK OK OK OK OK</span>
+<span class="coMULTI">/**********************************************************/</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">id</span><span class="br0">)</span> init
+<span class="br0">{</span>
+    <span class="kw1">if</span><span class="br0">(</span> <span class="br0">(</span>self<span class="sy0">=</span><span class="br0">[</span>super init<span class="br0">]</span> <span class="br0">)</span> <span class="br0">)</span> <span class="br0">{</span>
+        <span class="co2">// schedule a callback</span>
+        <span class="br0">[</span>self scheduleUpdate<span class="br0">]</span>;  <span class="co2">// available since v0.99.3</span>
+        <span class="br0">[</span>self schedule<span class="sy0">:</span> <span class="kw1">@selector</span><span class="br0">(</span>tick2<span class="sy0">:</span><span class="br0">)</span> interval<span class="sy0">:</span><span class="nu0">0.5</span><span class="br0">]</span>;
+    <span class="br0">}</span>
+&nbsp;
+    <span class="kw1">return</span> self;
+<span class="br0">}</span>
+&nbsp;
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> update<span class="sy0">:</span> <span class="br0">(</span>ccTime<span class="br0">)</span> dt
+<span class="br0">{</span>
+    <span class="co2">// bla bla bla</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> tick2<span class="sy0">:</span> <span class="br0">(</span>ccTime<span class="br0">)</span> dt
+<span class="br0">{</span>
+    <span class="co2">// bla bla bla</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// BAD BAD BAD BAD</span>
+<span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// Why BAD ?</span>
+<span class="co2">// You can't pause the game automatically.</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> onEnter
+<span class="br0">{</span>
+    <span class="br0">[</span>super onEnter<span class="br0">]</span>;
+    timer1 <span class="sy0">=</span> <span class="br0">[</span><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/"><span class="kw5">NSTimer</span></a> scheduledTimerWithTimeInterval<span class="sy0">:</span><span class="nu0">1</span><span class="sy0">/</span>FPS target<span class="sy0">:</span>self selector<span class="sy0">:</span><span class="kw1">@selector</span><span class="br0">(</span>tick1<span class="br0">)</span> userInfo<span class="sy0">:</span><span class="kw2">nil</span> repeats<span class="sy0">:</span><span class="kw2">YES</span><span class="br0">]</span>;
+    timer2 <span class="sy0">=</span> <span class="br0">[</span><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/"><span class="kw5">NSTimer</span></a> scheduledTimerWithTimeInterval<span class="sy0">:</span><span class="nu0">0.5</span> target<span class="sy0">:</span>self selector<span class="sy0">:</span><span class="kw1">@selector</span><span class="br0">(</span>tick2<span class="br0">)</span> userInfo<span class="sy0">:</span><span class="kw2">nil</span> repeats<span class="sy0">:</span><span class="kw2">YES</span><span class="br0">]</span>;
+<span class="br0">}</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> onExit
+<span class="br0">{</span>
+    <span class="br0">[</span>timer1 invalidate<span class="br0">]</span>;
+    <span class="br0">[</span>timer2 invalidate<span class="br0">]</span>;
+    <span class="br0">[</span>super onExit<span class="br0">]</span>;
+<span class="br0">}</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> tick
+<span class="br0">{</span>
+    <span class="co2">// bla bla bla</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> tick2
+<span class="br0">{</span>
+    <span class="co2">// bla bla bla</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h2 class="sectionedit10"><a name="draw_vs_update" id="draw_vs_update">Draw vs. update</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> try not to update any state variable inside the draw selector.</div>
+</li>
+<li class="level1"><div class="li"> try not to draw anything inside a scheduled selector</div>
+</li>
+<li class="level1"><div class="li"> Instead update the state variables inside a scheduled selector.</div>
+</li>
+<li class="level1"><div class="li"> Instead draw everything inside the draw selector</div>
+</li>
+<li class="level1"><div class="li"> If you update state variables inside the draw selector, the pause/resume won’t work as expected.</div>
+</li>
+<li class="level1"><div class="li"> If you draw something inside a scheduled selector, it can’t be transformed</div>
+</li>
+<li class="level1"><div class="li"> draw is called every frame</div>
+</li>
+<li class="level1"><div class="li"> scheduled selectors can be called with any frame rate, but no more frequently than the application’s FPS rate.</div>
+</li>
+</ul>
+<pre class="code objc"><span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// OK OK OK OK OK</span>
+<span class="coMULTI">/**********************************************************/</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> draw
+<span class="br0">{</span>
+    <span class="br0">[</span>item draw<span class="br0">]</span>;    <span class="co2">// OK: DRAW INSIDE DRAW</span>
+<span class="br0">}</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> update<span class="sy0">:</span><span class="br0">(</span>ccTime<span class="br0">)</span> dt
+<span class="br0">{</span>
+    item.position <span class="sy0">=</span> dt <span class="sy0">*</span> finalPosition; <span class="co2">// OK, UPDATE STATE IN SCHEDULED SELECTOR</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// BAD BAD BAD BAD 1</span>
+<span class="coMULTI">/**********************************************************/</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> draw
+<span class="br0">{</span>
+    dt <span class="sy0">=</span> <span class="br0">[</span>self calculateDelta<span class="br0">]</span>;         <span class="co2">// DONT UPDATE STATE IN DRAW.</span>
+    item.position <span class="sy0">=</span> dt <span class="sy0">*</span> finalPosition; <span class="co2">// Pause won't work</span>
+&nbsp;
+    <span class="br0">[</span>item draw<span class="br0">]</span>;
+<span class="br0">}</span>
+&nbsp;
+<span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// BAD BAD BAD BAD 2</span>
+<span class="coMULTI">/**********************************************************/</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> update<span class="sy0">:</span><span class="br0">(</span>ccTime<span class="br0">)</span> dt
+<span class="br0">{</span>
+    item.position <span class="sy0">=</span> dt <span class="sy0">*</span> finalPosition;
+    <span class="br0">[</span>item draw<span class="br0">]</span>;            <span class="co2">// &lt;--- DON'T DRAW IN SCHEDULED SELECTOR</span>
+    <span class="co2">// because transformations won't alter your image</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h2 class="sectionedit11"><a name="director_flow_control" id="director_flow_control">Director flow control</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> If possible try to use <code>replaceScene</code> instead of <code>pushScene</code></div>
+</li>
+<li class="level1"><div class="li"> <code>pushScene</code> is very handy, but it will put the pushed scene into memory, and memory is a precious resource in the iPhone.</div>
+</li>
+</ul>
+<pre class="code objc"><span class="co2">// TRY TO AVOID A BIG STACK OF PUSHED SCENES</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> mainMenu<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="co2">// etc</span>
+    <span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> pushScene<span class="sy0">:</span> gameScene<span class="br0">]</span>;
+<span class="br0">}</span>
+<span class="co2">// stack:</span>
+<span class="co2">//   . game  &lt;-- running scene</span>
+<span class="co2">//   . mainMenu</span>
+&nbsp;
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> game
+<span class="br0">{</span>
+    <span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> pushScene<span class="sy0">:</span> gameOverScene<span class="br0">]</span>;
+<span class="br0">}</span>
+<span class="co2">// stack:</span>
+<span class="co2">//   . gameOver  &lt;-- running scene</span>
+<span class="co2">//   . game</span>
+<span class="co2">//   . mainMenu</span>
+&nbsp;
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> showGameOver
+<span class="br0">{</span>
+    <span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> pushScene<span class="sy0">:</span> hiScoreScene<span class="br0">]</span>;
+<span class="br0">}</span>
+<span class="co2">// stack:</span>
+<span class="co2">//   . scores  &lt;-- running scene (4 pushed scenes... expensive)</span>
+<span class="co2">//   . gameOver</span>
+<span class="co2">//   . game</span>
+<span class="co2">//   . mainMenu</span></pre>
+
+</div>
+
+<h2 class="sectionedit12"><a name="creating_nodes_ccsprite_cclabel_etc" id="creating_nodes_ccsprite_cclabel_etc">Creating Nodes (CCSprite, CCLabel, etc..)</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> When possible try to create <code>CCNode</code> objects (<code>CCSprite</code>, <code>CCLabel</code>, <code>CCLayer</code>, etc) or any other kind of object in the <code>init</code> selector and not in the <code>draw</code> and any other scheduled selector</div>
+</li>
+<li class="level1"><div class="li"> The creation of nodes might be  expensive, so try to have them pre-created</div>
+</li>
+<li class="level1"><div class="li"> On the other hand, be careful with the memory. Don’t have unnecessary objects in memory.</div>
+</li>
+</ul>
+<pre class="code objc"><span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// OK, MOST OF THE TIME</span>
+<span class="coMULTI">/**********************************************************/</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">id</span><span class="br0">)</span> init
+<span class="br0">{</span>
+    <span class="co2">// etc...</span>
+&nbsp;
+    sprite1 <span class="sy0">=</span> <span class="br0">[</span>CCSprite create<span class="br0">]</span>;     <span class="co2">// &lt;-- USUALLY IT IS BETTER TO CREATE OBJECTS IN INIT</span>
+&nbsp;
+    <span class="co2">// etc...</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> tick<span class="sy0">:</span> <span class="br0">(</span>ccTime<span class="br0">)</span> dt
+<span class="br0">{</span>
+    <span class="co2">// etc...</span>
+    <span class="kw1">if</span><span class="br0">(</span> someThing <span class="br0">)</span> <span class="br0">{</span>
+        <span class="br0">[</span>sprite1 show<span class="br0">]</span>;         <span class="co2">// &lt;--- BUT IF YOU DON'T USE THEM FREQUENTLY, MEMORY IS WASTED</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="coMULTI">/**********************************************************/</span>
+<span class="co2">// BAD, MOST OF THE TIME</span>
+<span class="coMULTI">/**********************************************************/</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> tick<span class="sy0">:</span> <span class="br0">(</span>ccTime<span class="br0">)</span> dt
+<span class="br0">{</span>
+    <span class="co2">// etc...</span>
+    <span class="kw1">if</span><span class="br0">(</span> someThing <span class="br0">)</span> <span class="br0">{</span>
+        sprite <span class="sy0">=</span> <span class="br0">[</span>CCSprite create<span class="br0">]</span>;      <span class="co2">// &lt;--- EXPENSIVE</span>
+        <span class="br0">[</span>sprite1 show<span class="br0">]</span>;
+&nbsp;
+        <span class="co2">//...</span>
+&nbsp;
+        <span class="br0">[</span>sprite1 release<span class="br0">]</span>;      <span class="co2">// &lt;-- AT LEAST MEMORY IS RELEASED</span>
+    <span class="br0">}</span>
+&nbsp;
+<span class="br0">}</span></pre>
+
+</div>
+
+<h2 class="sectionedit13"><a name="hierarchy_of_layers" id="hierarchy_of_layers">Hierarchy of Layers</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Don’t create a big hierarchy of layers. Try to keep them low when possible.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit14"><a name="actions" id="actions">Actions</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> It is expensive to create certain actions, since it might require a lot of <code>malloc()</code>. For example: A <code>CCSequence</code> of a <code>CCSpawn</code> with a <code>CCRotateBy</code> with a another <code>CCSequence</code>, etc… is very expensive.</div>
+</li>
+<li class="level1"><div class="li"> So try to reuse actions.</div>
+</li>
+<li class="level1"><div class="li"> Once the action is used, save it for later if you know you will execute that type of action again. Then, instead of allocing a new action, you can just initialize it.</div>
+</li>
+</ul>
+
+<p>
+
+<em>2010.09.26 - This is confusing because most ObjectiveC classes do NOT expect their init method to be called again on an already initialized object.  And this will NOT work for some CCAction subclasses, CCIntervalAction as an example.   CCSequence will leak memory if you call InitOne:Two: on it a second time.  Etc.  To make CCSequence reusable I think you'd have to write a setActionOne:andTwo: and code the class to release the previous actions and then retain the new ones.  As a result, I do not believe this “you can just initialize it” advice is good or complete enough if there is some other kind of re-initialization that will work. </em>
+</p>
+
+</div>
+
+<h2 class="sectionedit15"><a name="buttons" id="buttons">Buttons</a></h2>
+<div class="level2">
+
+<p>
+<img src="./prog_guide best_practices – cocos2d for iPhone_files/fixme.gif" class="middle" alt="FIXME"> this is not a best practice but a Tip
+</p>
+<ul>
+<li class="level1"><div class="li"> Use a Menu with a <code>MenuItemImage</code> and place your menu using menu.position = ccp(x,y). See the <code>MenuTest</code> example for more details.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit16"><a name="how_does_the_pause_resume_works" id="how_does_the_pause_resume_works">How does the pause/resume works ?</a></h2>
+<div class="level2">
+
+<p>
+<img src="./prog_guide best_practices – cocos2d for iPhone_files/fixme.gif" class="middle" alt="FIXME"> this is not a best practice
+</p>
+<ul>
+<li class="level1"><div class="li"> when the director receives the pause message it won’t call any scheduled target/selector.</div>
+</li>
+<li class="level1"><div class="li"> but the draw selector will be called at a rate of 4 FPS (to reduce battery consumption)</div>
+</li>
+<li class="level1"><div class="li"> when the director receives the resume message, the scheduled target/selectors will be called again every frame.</div>
+</li>
+</ul>
+
+</div>
+
+	
+	
+			<div class="meta">
+			  <div class="user">
+			  			  </div>
+			  <div class="doc">
+			  prog_guide/best_practices.txt · Last modified: 2010/11/12 03:52 by admin			  </div>
+			</div>
+	
+	</div>
+        </div>
+      
+    
+
+
+     
+    <div id="trail">
+      <span class="bchead">Trace:</span> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:sprites" class="breadcrumbs" title="prog_guide:sprites">sprites</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:labels" class="breadcrumbs" title="prog_guide:labels">labels</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps" class="breadcrumbs" title="prog_guide:tiled_maps">tiled_maps</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:particles" class="breadcrumbs" title="prog_guide:particles">particles</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:draw_update" class="breadcrumbs" title="prog_guide:draw_update">draw_update</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:social_networks" class="breadcrumbs" title="prog_guide:social_networks">social_networks</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:setup_buffers" class="breadcrumbs" title="prog_guide:setup_buffers">setup_buffers</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation" class="breadcrumbs" title="prog_guide:autorotation">autorotation</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d" class="breadcrumbs" title="prog_guide:how_to_develop_retinadisplay_games_in_cocos2d">how_to_develop_retinadisplay_games_in_cocos2d</a> <span class="bcsep"></span> <span class="curid"><a href="./prog_guide best_practices – cocos2d for iPhone_files/prog_guide best_practices – cocos2d for iPhone.htm" class="breadcrumbs" title="prog_guide:best_practices">best_practices</a></span>    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+<div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./prog_guide best_practices – cocos2d for iPhone_files/cc-by-nc-sa.png" class="medialeft licbutton" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a> </div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./prog_guide best_practices – cocos2d for iPhone_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./prog_guide best_practices – cocos2d for iPhone_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./prog_guide best_practices – cocos2d for iPhone_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./prog_guide best_practices – cocos2d for iPhone_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="http://www.cocos2d-iphone.org/wiki/feed.php" title="Recent changes RSS feed"><img src="./prog_guide best_practices – cocos2d for iPhone_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./prog_guide best_practices – cocos2d for iPhone_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+
+<div class="no"><img src="./prog_guide best_practices – cocos2d for iPhone_files/indexer.php" width="1" height="1" alt=""></div>
+
+
+</body></html>

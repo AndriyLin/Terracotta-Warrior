@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0067)http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    prog_guide:autorotation – cocos2d for iPhone  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2010-08-05T11:56:01+0000">
+<meta name="keywords" content="prog_guide,autorotation">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.cocos2d-iphone.org/wiki/lib/exe/opensearch.php" title="cocos2d for iPhone">
+<link rel="start" href="http://www.cocos2d-iphone.org/wiki/">
+<link rel="contents" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.cocos2d-iphone.org/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.cocos2d-iphone.org/wiki/feed.php?mode=list&ns=prog_guide">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=export_xhtml">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=export_raw">
+<link rel="canonical" href="./prog_guide autorotation – cocos2d for iPhone_files/prog_guide autorotation – cocos2d for iPhone.htm">
+<link rel="stylesheet" media="screen" type="text/css" href="./prog_guide autorotation – cocos2d for iPhone_files/css.php">
+<link rel="stylesheet" media="all" type="text/css" href="./prog_guide autorotation – cocos2d for iPhone_files/css(1).php">
+<link rel="stylesheet" media="print" type="text/css" href="./prog_guide autorotation – cocos2d for iPhone_files/css(2).php">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+var NS='prog_guide';var JSINFO = {"id":"prog_guide:autorotation","namespace":"prog_guide"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="./prog_guide autorotation – cocos2d for iPhone_files/js.php"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+//--><!]]></script><script src="./prog_guide autorotation – cocos2d for iPhone_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var pageTracker = _gat._getTracker("UA-871936-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+//--><!]]></script>
+
+  <link rel="shortcut icon" href="http://www.cocos2d-iphone.org/wiki/lib/tpl/A_Centered_Perspective/images/favicon.ico">
+
+  
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+<body class="dw-left">
+<div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+
+<div id="menubar" class="dokuwiki">   
+   
+		<a href="http://www.cocos2d-iphone.org/wiki/doku.php/" name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle">cocos2d for iPhone</a>		<form action="http://www.cocos2d-iphone.org/wiki/doku.php/" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>		 
+            <div class="action-menus">
+        <div class="action-menu">
+			<div class="action-menu-title">
+				⚙
+			</div>
+			<div class="action-menu-content">
+          <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=edit&rev=" class="action source" accesskey="v" rel="nofollow" title="Show pagesource">Show pagesource</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions">Old revisions</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=backlink" class="action backlink" accesskey="" rel="nofollow" title="Backlinks">Backlinks</a>			</div>
+        </div>
+        <div class="action-menu">
+        <div class="action-menu-title">
+			⚒
+		</div>
+		<div class="action-menu-content"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes">Recent changes</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap">Sitemap</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation?do=login&sectok=0938ca5b2a987045f28dcadbcdcb6d9e" class="action login" accesskey="" rel="nofollow" title="Login">Login</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="wrapper" class="dokuwiki">
+
+    	
+
+
+    
+
+
+      
+
+    
+    
+    
+              <div class="left-sidebar">
+			<div class="menu">
+		  		<ul>
+
+</ul>
+			</div>
+          <div class="main_sidebar sidebar-box">
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/resources:official-cocos-icon-angry.png?id=wiki%3Asidebar" class="media" title="resources:official-cocos-icon-angry.png"><img src="./prog_guide autorotation – cocos2d for iPhone_files/resources-official-cocos-icon-angry.png" class="media" alt="" width="64"></a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/start" class="wikilink1" title="start">Wiki Home</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="wikilink1" title="prog_guide:index">Programming Guide</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/" class="urlextern" title="http://www.cocos2d-iphone.org" rel="nofollow">Blog</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/forum" class="urlextern" title="http://www.cocos2d-iphone.org/forum" rel="nofollow">Forum</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/games" class="urlextern" title="http://www.cocos2d-iphone.org/games" rel="nofollow">Games</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/store" class="urlextern" title="http://www.cocos2d-iphone.org/store" rel="nofollow">Store</a>
+</p>
+
+</div>
+        </div>
+        <div class="right-page">
+          <div id="page"><!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header" style="cursor: pointer; "><span id="toc__toggle" style="cursor: pointer; " class="toc_close"><span>−</span></span>Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation#autorotation" class="toc">Autorotation</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation#apple_s_recommendation" class="toc">Apple's recommendation</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation#the_uikit_autorotation" class="toc">The UIKit Autorotation</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation#the_cocos2d_autorotation" class="toc">The cocos2d Autorotation</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation#cocos2d_way_without_autorotation" class="toc">cocos2d way without autorotation</a></span></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation#accelerometer_and_orientations" class="toc">Accelerometer and orientations</a></span></div></li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1"><a name="autorotation" id="autorotation">Autorotation</a></h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2"><a name="apple_s_recommendation" id="apple_s_recommendation">Apple's recommendation</a></h2>
+<div class="level2">
+
+<p>
+
+From: <a href="https://devforums.apple.com/message/212814#212814" class="urlextern" title="https://devforums.apple.com/message/212814#212814" rel="nofollow">Frogblast</a>, an Apple developer:
+</p>
+
+<p>
+<em>“Asking CA (CoreAnimation) to apply rotations to your content is often slower than doing the work yourself within your own drawing with glRotate.  glRotate is effectively free, while CA might have to do more compositing work to get your image into an orientation that'll fit on the display.  The significance of that performance cost varies across devices, with the newer hardware being much less sensitive to this (but it still isn't free).
+</em>
+</p>
+
+<p>
+<em>Going down the glRotate path does (as you observed) make it more difficult to gracefully handle UIKit views at the same time.  The iPhone, iPhone 3G, and 1st Gen iPod touch will pay the most severe performance penalty.
+ </em>
+</p>
+
+<p>
+<em>Getting autorotation to work should be straightforward, so you should try it first and see if that meets your performance needs on your target devices (everything?  recent devices?  ipad only?), and then start looking into glRotate if needed.”</em>
+
+</p>
+
+</div>
+
+<h2 class="sectionedit3"><a name="the_uikit_autorotation" id="the_uikit_autorotation">The UIKit Autorotation</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> The rotation will be handled by a <code>UIViewController</code></div>
+</li>
+<li class="level1"><div class="li"> <code>shouldAutorotateToInterfaceOrientation:</code> should return <code>YES</code> for the supported orientations</div>
+</li>
+<li class="level1"><div class="li"> <code>willRotateToInterfaceOrientation:duration:</code> should resize the <code>EAGLView</code> if it supports both portrait and landscape orientations</div>
+</li>
+<li class="level1"><div class="li"> <code>CCDirector</code> should set the orientation to Portrait. DON'T modify the orientation using <code>CCDirector</code> in this method.</div>
+</li>
+</ul>
+
+<p>
+
+Features and limitations:
+</p>
+<ul>
+<li class="level1"><div class="li"> [+] There is no need to transform other possible UIKit objects, since the <code>EAGLView</code> will be always in the “correct” orientation</div>
+</li>
+<li class="level1"><div class="li"> [+] Other possible <code>UIKit</code> objects will auto rotate if the EAGLView is rotated.</div>
+</li>
+<li class="level1"><div class="li"> [-] It is a bit slower</div>
+</li>
+</ul>
+
+<p>
+
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:autorotation_viewcontroller.jpg?id=prog_guide%3Aautorotation" class="media" title="prog_guide:autorotation_viewcontroller.jpg"><img src="./prog_guide autorotation – cocos2d for iPhone_files/prog_guide-autorotation_viewcontroller.jpg" class="media" alt=""></a>
+</p>
+
+<p>
+Full working sample:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/cocos2d/cocos2d-iphone/tree/release-0.99.5-beta/tests/bugs/Bug-914/" class="urlextern" title="http://github.com/cocos2d/cocos2d-iphone/tree/release-0.99.5-beta/tests/bugs/Bug-914/" rel="nofollow"> Bug 914 sample</a></div>
+</li>
+</ul>
+
+<p>
+Sample:
+
+</p>
+<pre class="code objc"><span class="co2">// App Delegate</span>
+<span class="sy0">-</span> <span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> applicationDidFinishLaunching<span class="sy0">:</span><span class="br0">(</span>UIApplication<span class="sy0">*</span><span class="br0">)</span>application
+<span class="br0">{</span>
+	window <span class="sy0">=</span> <span class="br0">[</span><span class="br0">[</span>UIWindow alloc<span class="br0">]</span> initWithFrame<span class="sy0">:</span><span class="br0">[</span><span class="br0">[</span>UIScreen mainScreen<span class="br0">]</span> bounds<span class="br0">]</span><span class="br0">]</span>;
+&nbsp;
+	CCDirector <span class="sy0">*</span>director <span class="sy0">=</span> <span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span>;
+&nbsp;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// Init the UI View Controller</span>
+	<span class="co2">// </span>
+	viewController <span class="sy0">=</span> <span class="br0">[</span><span class="br0">[</span>rootViewController alloc<span class="br0">]</span> initWithNibName<span class="sy0">:</span><span class="kw2">nil</span> bundle<span class="sy0">:</span><span class="kw2">nil</span><span class="br0">]</span>;
+	viewController.wantsFullScreenLayout <span class="sy0">=</span> <span class="kw2">YES</span>;
+&nbsp;
+	EAGLView <span class="sy0">*</span>glView <span class="sy0">=</span> <span class="br0">[</span>EAGLView viewWithFrame<span class="sy0">:</span><span class="br0">[</span>window bounds<span class="br0">]</span>
+		pixelFormat<span class="sy0">:</span>kEAGLColorFormatRGBA8
+		depthFormat<span class="sy0">:</span>GL_DEPTH_COMPONENT24_OES
+		preserveBackbuffer<span class="sy0">:</span><span class="kw2">NO</span><span class="br0">]</span>;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// attach the openglView to the director</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>director setOpenGLView<span class="sy0">:</span>glView<span class="br0">]</span>;
+&nbsp;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// VERY IMPORTANT:</span>
+	<span class="co2">// If the rotation is going to be controlled by a UIViewController</span>
+	<span class="co2">// then the device orientation should be "Portrait". Default orientation is Portrait</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>director setDeviceOrientation<span class="sy0">:</span>kCCDeviceOrientationPortrait<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">//		</span>
+	<span class="co2">// make the OpenGLView a child of the view controller</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>viewController setView<span class="sy0">:</span>glView<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// make the View Controller a child of the main window</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>window addSubview<span class="sy0">:</span> viewController.view<span class="br0">]</span>;
+&nbsp;
+	<span class="br0">[</span>window makeKeyAndVisible<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">// Run the intro Scene</span>
+	<span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> runWithScene<span class="sy0">:</span> <span class="br0">[</span>HelloWorld scene<span class="br0">]</span><span class="br0">]</span>;	
+<span class="br0">}</span></pre>
+<pre class="code objc"><span class="co2">//</span>
+<span class="co2">// UIViewController</span>
+<span class="co2">//</span>
+&nbsp;
+<span class="co2">// Override to allow orientations other than the default portrait orientation.</span>
+<span class="sy0">-</span> <span class="br0">(</span><span class="kw4">BOOL</span><span class="br0">)</span>shouldAutorotateToInterfaceOrientation<span class="sy0">:</span><span class="br0">(</span>UIInterfaceOrientation<span class="br0">)</span>interfaceOrientation <span class="br0">{</span>
+&nbsp;
+    <span class="co2">// Return YES for supported orientations</span>
+&nbsp;
+	<span class="co2">// eg: Only support landscape orientations ?</span>
+<span class="co2">//	return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||</span>
+<span class="co2">//			interfaceOrientation == UIInterfaceOrientationLandscapeRight );</span>
+&nbsp;
+	<span class="co2">// eg: Support 4 orientations</span>
+	<span class="kw1">return</span> <span class="kw2">YES</span>;
+<span class="br0">}</span>
+&nbsp;
+&nbsp;
+<span class="co2">//</span>
+<span class="co2">// The EAGLView MUST be resized manually</span>
+<span class="co2">//</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span>willRotateToInterfaceOrientation<span class="sy0">:</span><span class="br0">(</span>UIInterfaceOrientation<span class="br0">)</span>toInterfaceOrientation duration<span class="sy0">:</span><span class="br0">(</span>NSTimeInterval<span class="br0">)</span>duration
+<span class="br0">{</span>
+	CGRect rect;
+	<span class="kw1">if</span><span class="br0">(</span>toInterfaceOrientation <span class="sy0">==</span> UIInterfaceOrientationPortrait || toInterfaceOrientation <span class="sy0">==</span> UIInterfaceOrientationPortraitUpsideDown<span class="br0">)</span> <span class="br0">{</span>
+		<span class="kw1">if</span> <span class="br0">(</span>UI_USER_INTERFACE_IDIOM<span class="br0">(</span><span class="br0">)</span> <span class="sy0">==</span> UIUserInterfaceIdiomPad<span class="br0">)</span>
+			rect <span class="sy0">=</span> CGRectMake<span class="br0">(</span><span class="nu0">0</span>, <span class="nu0">0</span>, <span class="nu0">768</span>, <span class="nu0">1024</span><span class="br0">)</span>;
+		<span class="kw1">else</span>
+			rect <span class="sy0">=</span> CGRectMake<span class="br0">(</span><span class="nu0">0</span>, <span class="nu0">0</span>, <span class="nu0">320</span>, <span class="nu0">480</span> <span class="br0">)</span>;
+&nbsp;
+	<span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>toInterfaceOrientation <span class="sy0">==</span> UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation <span class="sy0">==</span> UIInterfaceOrientationLandscapeRight<span class="br0">)</span> <span class="br0">{</span>
+		<span class="kw1">if</span> <span class="br0">(</span>UI_USER_INTERFACE_IDIOM<span class="br0">(</span><span class="br0">)</span> <span class="sy0">==</span> UIUserInterfaceIdiomPad<span class="br0">)</span>
+			rect <span class="sy0">=</span> CGRectMake<span class="br0">(</span><span class="nu0">0</span>, <span class="nu0">0</span>, <span class="nu0">1024</span>, <span class="nu0">768</span><span class="br0">)</span>;
+		<span class="kw1">else</span>
+			rect <span class="sy0">=</span> CGRectMake<span class="br0">(</span><span class="nu0">0</span>, <span class="nu0">0</span>, <span class="nu0">480</span>, <span class="nu0">320</span> <span class="br0">)</span>;
+	<span class="br0">}</span>
+&nbsp;
+	EAGLView <span class="sy0">*</span>glView <span class="sy0">=</span> <span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> openGLView<span class="br0">]</span>;
+	glView.frame <span class="sy0">=</span> rect;
+<span class="br0">}</span></pre>
+
+</div>
+
+<h2 class="sectionedit4"><a name="the_cocos2d_autorotation" id="the_cocos2d_autorotation">The cocos2d Autorotation</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> The rotation will be handled by a <code>CCDirector</code>. The <code>EAGLView</code> object won't be rotated, but the <code>glRotatef()</code> command will rotate all the rendered objects.</div>
+</li>
+<li class="level1"><div class="li"> <code>shouldAutorotateToInterfaceOrientation:</code> should return <code>NO</code>. But it should rotate the interface using <code>CCDirector</code></div>
+</li>
+</ul>
+
+<p>
+
+Features and limitations:
+</p>
+<ul>
+<li class="level1"><div class="li"> [+] Fast. The interface is rotated using a cheap <code>glRotatef()</code> command</div>
+</li>
+<li class="level1"><div class="li"> [-] UIKit objects needs to be transformed manually</div>
+</li>
+<li class="level1"><div class="li"> [-] If the interface is autorotated, then the <code>UIKit</code> objects won't rotate automatically. You'll have to rotate them manually.</div>
+</li>
+</ul>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:autorotation_cocos2d.jpg?id=prog_guide%3Aautorotation" class="media" title="prog_guide:autorotation_cocos2d.jpg"><img src="./prog_guide autorotation – cocos2d for iPhone_files/prog_guide-autorotation_cocos2d.jpg" class="media" alt=""></a>
+</p>
+
+<p>
+
+Sample:
+
+</p>
+<pre class="code objc"><span class="co2">//</span>
+<span class="co2">// App Delegate: Very similar to the previous sample</span>
+<span class="co2">//</span>
+<span class="sy0">-</span> <span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> applicationDidFinishLaunching<span class="sy0">:</span><span class="br0">(</span>UIApplication<span class="sy0">*</span><span class="br0">)</span>application
+<span class="br0">{</span>
+	window <span class="sy0">=</span> <span class="br0">[</span><span class="br0">[</span>UIWindow alloc<span class="br0">]</span> initWithFrame<span class="sy0">:</span><span class="br0">[</span><span class="br0">[</span>UIScreen mainScreen<span class="br0">]</span> bounds<span class="br0">]</span><span class="br0">]</span>;
+&nbsp;
+	CCDirector <span class="sy0">*</span>director <span class="sy0">=</span> <span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span>;
+&nbsp;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// Init the UI View Controller</span>
+	<span class="co2">// </span>
+	viewController <span class="sy0">=</span> <span class="br0">[</span><span class="br0">[</span>rootViewController alloc<span class="br0">]</span> initWithNibName<span class="sy0">:</span><span class="kw2">nil</span> bundle<span class="sy0">:</span><span class="kw2">nil</span><span class="br0">]</span>;
+	viewController.wantsFullScreenLayout <span class="sy0">=</span> <span class="kw2">YES</span>;
+&nbsp;
+	EAGLView <span class="sy0">*</span>glView <span class="sy0">=</span> <span class="br0">[</span>EAGLView viewWithFrame<span class="sy0">:</span><span class="br0">[</span>window bounds<span class="br0">]</span>
+		pixelFormat<span class="sy0">:</span>kEAGLColorFormatRGBA8
+		depthFormat<span class="sy0">:</span>GL_DEPTH_COMPONENT24_OES
+		preserveBackbuffer<span class="sy0">:</span><span class="kw2">NO</span><span class="br0">]</span>;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// attach the openglView to the director</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>director setOpenGLView<span class="sy0">:</span>glView<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// Set the initial orientation. eg: Landscape Left</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>director setDeviceOrientation<span class="sy0">:</span>kCCDeviceOrientationLandscapeLeft<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">//		</span>
+	<span class="co2">// make the OpenGLView a child of the view controller</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>viewController setView<span class="sy0">:</span>glView<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// make the View Controller a child of the main window</span>
+	<span class="co2">//</span>
+	<span class="br0">[</span>window addSubview<span class="sy0">:</span> viewController.view<span class="br0">]</span>;
+&nbsp;
+	<span class="br0">[</span>window makeKeyAndVisible<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">// Run the intro Scene</span>
+	<span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> runWithScene<span class="sy0">:</span> <span class="br0">[</span>HelloWorld scene<span class="br0">]</span><span class="br0">]</span>;	
+<span class="br0">}</span></pre>
+<pre class="code objc"><span class="co2">//</span>
+<span class="co2">// UIViewController</span>
+<span class="co2">//</span>
+&nbsp;
+<span class="co2">//</span>
+<span class="co2">// Rotate manually using CCDirector</span>
+<span class="co2">//</span>
+<span class="sy0">-</span> <span class="br0">(</span><span class="kw4">BOOL</span><span class="br0">)</span>shouldAutorotateToInterfaceOrientation<span class="sy0">:</span><span class="br0">(</span>UIInterfaceOrientation<span class="br0">)</span>interfaceOrientation <span class="br0">{</span>
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// IMPORTANT:</span>
+	<span class="co2">// InterfaceOrientation is the opposite of DeviceOrientation</span>
+	<span class="co2">//</span>
+	<span class="kw1">if</span><span class="br0">(</span> interfaceOrientation <span class="sy0">==</span> UIInterfaceOrientationLandscapeLeft <span class="br0">)</span> <span class="br0">{</span>
+		<span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> setDeviceOrientation<span class="sy0">:</span> kCCDeviceOrientationLandscapeRight<span class="br0">]</span>;
+	<span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span> interfaceOrientation <span class="sy0">==</span> UIInterfaceOrientationLandscapeRight<span class="br0">)</span> <span class="br0">{</span>
+		<span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> setDeviceOrientation<span class="sy0">:</span> kCCDeviceOrientationLandscapeLeft<span class="br0">]</span>;
+	<span class="br0">}</span>
+&nbsp;
+	<span class="co2">//</span>
+	<span class="co2">// MUST return NO.</span>
+	<span class="co2">//</span>
+	<span class="kw1">return</span> <span class="kw2">NO</span>;
+<span class="br0">}</span></pre>
+
+</div>
+
+<h2 class="sectionedit5"><a name="cocos2d_way_without_autorotation" id="cocos2d_way_without_autorotation">cocos2d way without autorotation</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> CCDirector sets the desired orientation</div>
+</li>
+<li class="level1"><div class="li"> No need to create a <code>UIViewController</code></div>
+</li>
+</ul>
+
+<p>
+
+Features and limitations:
+</p>
+<ul>
+<li class="level1"><div class="li"> [+] Rotation is cheap</div>
+</li>
+<li class="level1"><div class="li"> [-] No support for autorotation. </div>
+</li>
+<li class="level1"><div class="li"> [-] Not suitable for iPad since ALL iPad apps MUST support autoration</div>
+</li>
+</ul>
+
+<p>
+
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:no_autorotation.jpg?id=prog_guide%3Aautorotation" class="media" title="prog_guide:no_autorotation.jpg"><img src="./prog_guide autorotation – cocos2d for iPhone_files/prog_guide-no_autorotation.jpg" class="media" alt=""></a>
+</p>
+
+<p>
+Sample:
+</p>
+<pre class="code objc"><span class="sy0">-</span> <span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> applicationDidFinishLaunching<span class="sy0">:</span><span class="br0">(</span>UIApplication<span class="sy0">*</span><span class="br0">)</span>application
+<span class="br0">{</span>
+	<span class="co2">// CC_DIRECTOR_INIT()</span>
+	<span class="co2">//</span>
+	<span class="co2">// 1. Initializes an EAGLView with 0-bit depth format, and RGB565 render buffer</span>
+	<span class="co2">// 2. EAGLView multiple touches: disabled</span>
+	<span class="co2">// 3. creates a UIWindow, and assign it to the "window" var (it must already be declared)</span>
+	<span class="co2">// 4. Parents EAGLView to the newly created window</span>
+	<span class="co2">// 5. Creates Display Link Director</span>
+	<span class="co2">// 5a. If it fails, it will use an NSTimer director</span>
+	<span class="co2">// 6. It will try to run at 60 FPS</span>
+	<span class="co2">// 7. Display FPS: NO</span>
+	<span class="co2">// 8. Device orientation: Portrait</span>
+	<span class="co2">// 9. Connects the director to the EAGLView</span>
+	<span class="co2">//</span>
+	CC_DIRECTOR_INIT<span class="br0">(</span><span class="br0">)</span>;
+&nbsp;
+	<span class="co2">// Obtain the shared director in order to...</span>
+	CCDirector <span class="sy0">*</span>director <span class="sy0">=</span> <span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span>;
+&nbsp;
+	<span class="co2">// Sets landscape mode</span>
+	<span class="br0">[</span>director setDeviceOrientation<span class="sy0">:</span>kCCDeviceOrientationLandscapeLeft<span class="br0">]</span>;
+&nbsp;
+	CCScene <span class="sy0">*</span>scene <span class="sy0">=</span> <span class="br0">[</span>CCScene node<span class="br0">]</span>;
+	<span class="br0">[</span>scene addChild<span class="sy0">:</span> <span class="br0">[</span>nextAction<span class="br0">(</span><span class="br0">)</span> node<span class="br0">]</span><span class="br0">]</span>;
+&nbsp;
+	<span class="br0">[</span>director runWithScene<span class="sy0">:</span> scene<span class="br0">]</span>;
+<span class="br0">}</span></pre>
+
+</div>
+
+<h1 class="sectionedit6"><a name="accelerometer_and_orientations" id="accelerometer_and_orientations">Accelerometer and orientations</a></h1>
+<div class="level1">
+
+<p>
+
+<strong>Don't forget to update your accelerometer code. </strong>
+</p>
+
+<p>
+You should also test that your accelerometer code also works with different orientations!
+</p>
+
+</div>
+
+	
+	
+			<div class="meta">
+			  <div class="user">
+			  			  </div>
+			  <div class="doc">
+			  prog_guide/autorotation.txt · Last modified: 2010/08/05 11:56 by admin			  </div>
+			</div>
+	
+	</div>
+        </div>
+      
+    
+
+
+     
+    <div id="trail">
+      <span class="bchead">Trace:</span> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special" class="breadcrumbs" title="prog_guide:actions_special">actions_special</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:animation" class="breadcrumbs" title="prog_guide:animation">animation</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:sprites" class="breadcrumbs" title="prog_guide:sprites">sprites</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:labels" class="breadcrumbs" title="prog_guide:labels">labels</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps" class="breadcrumbs" title="prog_guide:tiled_maps">tiled_maps</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:particles" class="breadcrumbs" title="prog_guide:particles">particles</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:draw_update" class="breadcrumbs" title="prog_guide:draw_update">draw_update</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:social_networks" class="breadcrumbs" title="prog_guide:social_networks">social_networks</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:setup_buffers" class="breadcrumbs" title="prog_guide:setup_buffers">setup_buffers</a> <span class="bcsep"></span> <span class="curid"><a href="./prog_guide autorotation – cocos2d for iPhone_files/prog_guide autorotation – cocos2d for iPhone.htm" class="breadcrumbs" title="prog_guide:autorotation">autorotation</a></span>    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+<div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./prog_guide autorotation – cocos2d for iPhone_files/cc-by-nc-sa.png" class="medialeft licbutton" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a> </div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./prog_guide autorotation – cocos2d for iPhone_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./prog_guide autorotation – cocos2d for iPhone_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./prog_guide autorotation – cocos2d for iPhone_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./prog_guide autorotation – cocos2d for iPhone_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="http://www.cocos2d-iphone.org/wiki/feed.php" title="Recent changes RSS feed"><img src="./prog_guide autorotation – cocos2d for iPhone_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./prog_guide autorotation – cocos2d for iPhone_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+
+<div class="no"><img src="./prog_guide autorotation – cocos2d for iPhone_files/indexer.php" width="1" height="1" alt=""></div>
+
+
+</body></html>

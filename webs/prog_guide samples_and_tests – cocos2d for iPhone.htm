@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    prog_guide:samples_and_tests – cocos2d for iPhone  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2010-06-21T06:20:34+0000">
+<meta name="keywords" content="prog_guide,samples_and_tests">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.cocos2d-iphone.org/wiki/lib/exe/opensearch.php" title="cocos2d for iPhone">
+<link rel="start" href="http://www.cocos2d-iphone.org/wiki/">
+<link rel="contents" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.cocos2d-iphone.org/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.cocos2d-iphone.org/wiki/feed.php?mode=list&ns=prog_guide">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=export_xhtml">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=export_raw">
+<link rel="canonical" href="./prog_guide samples_and_tests – cocos2d for iPhone_files/prog_guide samples_and_tests – cocos2d for iPhone.htm">
+<link rel="stylesheet" media="screen" type="text/css" href="./prog_guide samples_and_tests – cocos2d for iPhone_files/css.php">
+<link rel="stylesheet" media="all" type="text/css" href="./prog_guide samples_and_tests – cocos2d for iPhone_files/css(1).php">
+<link rel="stylesheet" media="print" type="text/css" href="./prog_guide samples_and_tests – cocos2d for iPhone_files/css(2).php">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+var NS='prog_guide';var JSINFO = {"id":"prog_guide:samples_and_tests","namespace":"prog_guide"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="./prog_guide samples_and_tests – cocos2d for iPhone_files/js.php"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+//--><!]]></script><script src="./prog_guide samples_and_tests – cocos2d for iPhone_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var pageTracker = _gat._getTracker("UA-871936-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+//--><!]]></script>
+
+  <link rel="shortcut icon" href="http://www.cocos2d-iphone.org/wiki/lib/tpl/A_Centered_Perspective/images/favicon.ico">
+
+  
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+<body class="dw-left" style="position: static; ">
+<div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+
+<div id="menubar" class="dokuwiki">   
+   
+		<a href="http://www.cocos2d-iphone.org/wiki/doku.php/" name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle">cocos2d for iPhone</a>		<form action="http://www.cocos2d-iphone.org/wiki/doku.php/" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; "></div></div></form>		 
+            <div class="action-menus">
+        <div class="action-menu">
+			<div class="action-menu-title">
+				⚙
+			</div>
+			<div class="action-menu-content">
+          <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=edit&rev=" class="action source" accesskey="v" rel="nofollow" title="Show pagesource">Show pagesource</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions">Old revisions</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=backlink" class="action backlink" accesskey="" rel="nofollow" title="Backlinks">Backlinks</a>			</div>
+        </div>
+        <div class="action-menu">
+        <div class="action-menu-title">
+			⚒
+		</div>
+		<div class="action-menu-content"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes">Recent changes</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap">Sitemap</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:samples_and_tests?do=login&sectok=0938ca5b2a987045f28dcadbcdcb6d9e" class="action login" accesskey="" rel="nofollow" title="Login">Login</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="wrapper" class="dokuwiki">
+
+    	
+
+
+    
+
+
+      
+
+    
+    
+    
+              <div class="left-sidebar">
+			<div class="menu">
+		  		<ul>
+
+</ul>
+			</div>
+          <div class="main_sidebar sidebar-box">
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/resources:official-cocos-icon-angry.png?id=wiki%3Asidebar" class="media" title="resources:official-cocos-icon-angry.png"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/resources-official-cocos-icon-angry.png" class="media" alt="" width="64"></a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/start" class="wikilink1" title="start">Wiki Home</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="wikilink1" title="prog_guide:index">Programming Guide</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/" class="urlextern" title="http://www.cocos2d-iphone.org" rel="nofollow">Blog</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/forum" class="urlextern" title="http://www.cocos2d-iphone.org/forum" rel="nofollow">Forum</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/games" class="urlextern" title="http://www.cocos2d-iphone.org/games" rel="nofollow">Games</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/store" class="urlextern" title="http://www.cocos2d-iphone.org/store" rel="nofollow">Store</a>
+</p>
+
+</div>
+        </div>
+        <div class="right-page">
+          <div id="page">
+<p>
+Below is a brief summary of the samples and tests included with the Cocos2d distribution (0.99.4 beta).
+</p>
+
+<p>
+<del>== AccelViewPort test ==
+
+  * landscape, fps, large bg, show touch pos, anim/rotate/spin man, several figures
+</del>
+
+</p>
+
+<h5><a name="actionmanagertest" id="actionmanagertest">ActionManagerTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, rotates/move actions</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="actionstest" id="actionstest">ActionsTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, move, rotate, scale, jump, bezier, blink, fade, tint, anim, sequences</div>
+</li>
+</ul>
+
+<p>
+spawn (multiple simultaneous actions), delayed. repeat, orbitcamera, followaction,
+propertyaction
+</p>
+
+</div>
+
+<h5><a name="actionswithblocks" id="actionswithblocks">ActionsWithBlocks</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> compile fails for me :( - </div>
+</li>
+</ul>
+
+<p>
+<em>Invalid value 'coop.plausible.blocks.compilers.gcc.4_2' for GCC_VERSION
+</em>
+</p>
+
+<p>
+To make this compile, you need to install <a href="http://www.cocos2d-iphone.org/wiki/doku.php/release_notes:0_99_2#blocks_support" class="urlextern" title="http://www.cocos2d-iphone.org/wiki/doku.php/release_notes:0_99_2#blocks_support" rel="nofollow">Plausible Blocks</a>, an SDK3.0 Blocks implementation.
+</p>
+
+</div>
+
+<h5><a name="atlastest" id="atlastest">AtlasTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape/fps, demo of using textures (aka atlas?), font atlas, able to change colors/opacity/rotation/move/alignments - use as sprites</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="attachtest" id="attachtest">AttachTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> portrait,fps, figure moves to touched spot, not sure whats the 'attach' bit..</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="box2dacceltest" id="box2dacceltest">Box2dAccelTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, box2d physics engine demo, boxes falling from sky in physical kind of way</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="box2dtestbed" id="box2dtestbed">Box2dTestBed</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, many physics demos</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="chipmunkacceltouchtest" id="chipmunkacceltouchtest">ChipmunkAccelTouchTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> portrait, fps, chipmunk physics stuff</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="chipmunktestbed" id="chipmunktestbed">ChipmunkTestbed</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> portrait, fps, more chipmunk demos</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="clickandmove_test" id="clickandmove_test">ClickAndMove test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> portrait fps, touch and grossini rotates to the touch point.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="cocosdenshiondemo_x4" id="cocosdenshiondemo_x4">CocosDenshionDemo (x4)</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> no orientation, simple sound pad thing, touch button for a sound.</div>
+</li>
+<li class="level1"><div class="li"> There are 4 of these test:</div>
+<ul>
+<li class="level2"><div class="li"> Tom the Turret</div>
+</li>
+<li class="level2"><div class="li"> Drum Pad</div>
+</li>
+<li class="level2"><div class="li"> Fade to Grey</div>
+</li>
+<li class="level2"><div class="li"> Fancy Rat Metering</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="cocoslivetest" id="cocoslivetest">CocosLiveTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> demo of the high score facility.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="cocosnodetest" id="cocosnodetest">CocosNodeTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, camera, rotations, anchorpoints, children, tags, remove/cleanup +with children, stress tests, nodeToParent, camera orbits/zoom</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="drawprimitivestest" id="drawprimitivestest">DrawPrimitivesTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> fps, draws primitive shapes/curves etc, next/prev re-orients iphone.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="eaglview_test" id="eaglview_test">EAGLView Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Creates an EAGLView using Interface Builder</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="easeactionstest" id="easeactionstest">EaseActionsTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, ease in/out, exp in/out, etc, elastic in/out, bounce in/out, scheduler, scaleTime</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="effects_test" id="effects_test">Effects Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, Shaky3D, Waves3D, FlipX3D, FlipY3D, Lens3D, Ripple3D, Liquid3D, Waves, Twirl, </div>
+</li>
+</ul>
+
+<p>
+ShakyTiles3D and many more…
+</p>
+
+</div>
+
+<h5><a name="effects_advanced_test" id="effects_advanced_test">Effects Advanced Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, combining 2 or more effects at once - funky.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="font_test" id="font_test">Font Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Tests and Shows how to use custom TTF fonts</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="interval_test" id="interval_test">Interval Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Tests the CCNode scheduler <acronym title="Application Programming Interface">API</acronym></div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="layer_test" id="layer_test">Layer Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, couple of color/blend layer tests</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="menu_test" id="menu_test">Menu Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, test different menu/button styles</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="menu_test_with_blocks" id="menu_test_with_blocks">Menu Test with Blocks</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Tests MenuItems with Blocks. It needs PLblocks.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="motion_streak_test" id="motion_streak_test">Motion Streak Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, examples of how you add motion streaks to your sprites.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="parallax_test" id="parallax_test">Parallax Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, examples using parallax, auto move and touch to move.</div>
+</li>
+</ul>
+
+<p>
+
+<del>== Particle View ==
+  * portrait, fps, shows fireworks type effects
+</del>
+
+</p>
+
+</div>
+
+<h5><a name="particle_test" id="particle_test">Particle Test</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> portrait, fps, <strong>wow</strong> - lots of fireworks type effects</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="pasoundenginetest" id="pasoundenginetest">PASoundEngineTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> stereo sound tests?</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="performancetestchildrennode" id="performancetestchildrennode">PerformanceTestChildrenNode</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Landscape, fps, does background testing - see console.</div>
+</li>
+<li class="level1"><div class="li"> Need to enable profilers for it to compile, ie, in ccConfig.h, change this:</div>
+</li>
+</ul>
+
+<p>
+<code>#define CC_ENABLE_PROFILERS 1</code>
+</p>
+
+</div>
+
+<h5><a name="performancetestparticles" id="performancetestparticles">PerformanceTestParticles</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> portrait, fps, vary speeds/sizes </div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="performancetestsprites" id="performancetestsprites">PerformanceTestSprites</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, lots of sprites, some rotating</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="performancetesttouches" id="performancetesttouches">PerformanceTestTouches</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, touches - targeted and standard (huh?)</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="progressactionstests" id="progressactionstests">ProgressActionsTests</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, ProgressTo, ways to make sprite appear.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="rendertexturetest" id="rendertexturetest">RenderTextureTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, like a little drawing app.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="rotateworldtest" id="rotateworldtest">RotateWorldTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, lots of rotations</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="scenetest" id="scenetest">SceneTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, samples switching scenes.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="schedulertest" id="schedulertest">SchedulerTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, tho its not a visual test, lots of tests, via console</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="spritetest" id="spritetest">SpriteTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, lots of sprites, animated</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="texture2dtest" id="texture2dtest">Texture2dTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, different texture tests, anti-alias, PVR, mipmap, rotates, other image types, blending, GL_CLAMP, GL_REPEAT</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="tilemaptest" id="tilemaptest">TileMapTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, tile options, ortho, hex, Iso, Zorder</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="touchestest" id="touchestest">TouchesTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> portrait, fps, ping pong game like test</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="transitionstest" id="transitionstest">TransitionsTest</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, fps, CCJumpZoom, CCCrossFade, CCRadialCCW, CCRadialCW, PageTransitionForward/Backward, CCFadeTR/BL/Up/DownTransition, CCTurnOffTiles, CCSplitRows/Cols, CCFade, FadeWhite, FlipXLeft/RightOver, FlipYUp/DownOver, FlipAngularLeft/RightOver, and lots more cool transitions…</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="helloworldsample" id="helloworldsample">HelloWorldSample</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, just says Hello World :)</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="helloactionssample" id="helloactionssample">HelloActionsSample</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, moving text and sprite, via actions</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="helloeventssample" id="helloeventssample">HelloEventsSample</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> landscape, text and sprite, sprite moves to touched position.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="bug422_bug350" id="bug422_bug350">Bug422/Bug350</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> bug specific test routines.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="more_to_come" id="more_to_come">More to come...</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> link to source/main part of each test - in source repo.</div>
+</li>
+</ul>
+
+</div>
+
+	
+	
+			<div class="meta">
+			  <div class="user">
+			  			  </div>
+			  <div class="doc">
+			  prog_guide/samples_and_tests.txt · Last modified: 2010/06/21 06:20 by kimptoc			  </div>
+			</div>
+	
+	</div>
+        </div>
+      
+    
+
+
+     
+    <div id="trail">
+      <span class="bchead">Trace:</span> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:labels" class="breadcrumbs" title="prog_guide:labels">labels</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps" class="breadcrumbs" title="prog_guide:tiled_maps">tiled_maps</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:particles" class="breadcrumbs" title="prog_guide:particles">particles</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:draw_update" class="breadcrumbs" title="prog_guide:draw_update">draw_update</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:social_networks" class="breadcrumbs" title="prog_guide:social_networks">social_networks</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:setup_buffers" class="breadcrumbs" title="prog_guide:setup_buffers">setup_buffers</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:autorotation" class="breadcrumbs" title="prog_guide:autorotation">autorotation</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:how_to_develop_retinadisplay_games_in_cocos2d" class="breadcrumbs" title="prog_guide:how_to_develop_retinadisplay_games_in_cocos2d">how_to_develop_retinadisplay_games_in_cocos2d</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:best_practices" class="breadcrumbs" title="prog_guide:best_practices">best_practices</a> <span class="bcsep"></span> <span class="curid"><a href="./prog_guide samples_and_tests – cocos2d for iPhone_files/prog_guide samples_and_tests – cocos2d for iPhone.htm" class="breadcrumbs" title="prog_guide:samples_and_tests">samples_and_tests</a></span>    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+<div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/cc-by-nc-sa.png" class="medialeft licbutton" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a> </div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="http://www.cocos2d-iphone.org/wiki/feed.php" title="Recent changes RSS feed"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+
+<div class="no"><img src="./prog_guide samples_and_tests – cocos2d for iPhone_files/indexer.php" width="1" height="1" alt=""></div>
+
+
+</body></html>

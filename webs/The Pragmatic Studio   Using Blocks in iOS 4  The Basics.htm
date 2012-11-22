@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0055)http://pragmaticstudio.com/blog/2010/7/28/ios4-blocks-1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" version="-//W3C//DTD XHTML 1.1//EN" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<title>The Pragmatic Studio | Using Blocks in iOS 4: The Basics</title>
+<meta name="description" content="The Pragmatic Studio: Top developer training from the folks who wrote the books">
+<meta name="keywords" content="pragmatic studio, training, rails, ruby on rails, rails training, ruby on rails training, advanced rails, advanced rails training, ruby, ruby training, objective-c, xcode, iphone, sdk, iphone training, cocoa training, mac app training, learn iphone sdk, develop iphone apps, learn iphone, screencasts, video tutorials">
+<meta name="copyright" content="Copyright (c) 2005-2011 The Pragmatic Studio. All Rights Reserved.">
+<meta name="robots" content="all">
+<link rel="shortcut icon" href="http://pragmaticstudio.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://pragmaticstudio.com/apple-touch-icon.png">
+<link href="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/pragstudio.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/print.css" media="print" rel="stylesheet" type="text/css">
+<link href="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/shCore.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/shThemeStudio.css" media="screen" rel="stylesheet" type="text/css">
+<!--[if IE 6]>
+  <link href="http://pragmaticstudio.com/stylesheets/ie6.css?1296228243" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+  <link href="http://pragmaticstudio.com/stylesheets/ie7.css?1296228243" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" async="" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/ga.js"></script><script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/prototype.js" type="text/javascript"></script>
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/rounded.js" type="text/javascript"></script>
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/jquery.validate.min.js" type="text/javascript"></script>
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/application.js" type="text/javascript"></script>
+
+
+<link rel="alternate" type="application/atom+xml" title="Blog" href="http://feeds.feedburner.com/PragmaticStudio">
+
+
+
+
+  <script type="text/javascript" async="" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/embed.js"></script><script async="" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/count.js"></script><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style><script type="text/javascript" async="" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/count(1).js"></script></head>
+  <body id="two-column-layout">
+    <div id="page-wrapper">
+      <div id="page">
+        <div id="header-wrapper">
+  <div id="header">
+    <div id="logo">
+      <a href="http://pragmaticstudio.com/" title="The Pragmatic Studio"><img alt="The Pragmatic Studio" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/logo.gif" title="The Pragmatic Studio"></a>
+    </div>
+    <div id="navigation">
+      <p>
+        <a href="http://pragmaticstudio.com/">All Courses</a><span class="separator"> | </span><a href="http://pragmaticstudio.com/onsite-training">On-Site Training</a><span class="separator"> | </span><a href="http://pragmaticstudio.com/blog" class="here">Blog</a><span class="separator"> | </span><a href="http://pragmaticstudio.com/jobs">Job Board</a><span class="separator"> | </span><a href="http://pragmaticstudio.com/about">About Us</a>
+      </p>
+    </div>
+  </div>
+</div>
+        <hr class="hidden">
+        <div id="main">
+          <div id="content-wrapper">
+            <div id="content">
+                <div id="head-wrapper">
+                  <div id="head">
+                      <h1>Using Blocks in iOS 4: The Basics</h1>
+  <h2>July 28, 2010 by Mike Clark</h2>
+
+                  </div>
+                </div>
+              
+
+<div id="news">
+  <div class="post">
+	  <div class="entry">
+	  	<p>iOS 4 introduces one new feature that will fundamentally change the way you program in general: blocks. Blocks are an extension to the C language and thus fully supported in Objective-C. If you’re coming from a programming language such as Ruby, Python, or Lisp, then you know the power of blocks. Simply put, blocks let you encapsulate chunks of code and pass them around like any other object. It’s a different style of programming that you’ll want to become familiar with to take advantage of new APIs in iOS 4.</p>
+
+<p>Let’s start by taking a look at two examples of where you might use blocks in iOS 4: view animations and enumeration.</p>
+<h3>Blocks By Example</h3>
+<p>As our first example, suppose we’re creating a card game and we want to animate sliding a card from the dealer’s hand to a player’s position. Fortunately, the UIKit framework does all the heavy lifting when it comes to performing animations. What gets animated, however, is specific to your application. You specify what will be animated in a block, and toss it over to the <code>animateWithDuration:animations:</code> method, like so:</p>
+<pre class="brush: objc">[UIView animateWithDuration:2.0
+    animations:^ {
+        self.cardView.alpha = 1.0;
+        self.cardView.frame = CGRectMake(176.0, 258.0, 72.0, 96.0);
+        self.cardView.transform = CGAffineTransformMakeRotation(M_PI);
+    }
+];
+</pre>
+<p>When this animation block is run, our card view will animate in three ways: change its alpha to fade in the card, change its position to the lower-right of the frame (the player’s position), and rotate itself 180 degrees (to give the dealer style points).</p>
+
+<p>Our second example of blocks is to enumerate over a collection of cards and print the name and index of each card. You could use a <code>for</code> loop for this, but in iOS 4 the <code>NSArray</code> class has a handy <code>enumerateObjectsUsingBlock:</code> method that takes a block. Here’s how to use it:</p>
+<pre class="brush: objc">NSArray *cards = 
+    [NSArray arrayWithObjects:@"Jack", @"Queen", @"King", @"Ace", nil];
+
+[cards enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+    NSLog(@"%@ card at index %d", object, index);
+}];
+</pre>
+<p>As we’ll explore a bit more later, this block takes three parameters: the current element in the array, its index, and a flag to signal whether enumeration should stop (which we’ve ignored). The <code>enumerateObjectsUsingBlock:</code> method calls the block once for each element in the array and supplies the parameters.</p>
+
+<p>So the upshot of using blocks in your Mac and iOS apps is that they allow you to attach arbitrary code to Apple-provided methods. Although similar in concept to delegation, passing short inline blocks of code to methods is often more convenient and elegant.</p>
+
+<p>That’s a good start, but it’s important to understand what’s going on. Whenever I’m learning anything new, I like to break it down into its simplest elements, get comfortable with how they work, and then (hopefully) put everything back together again. That way I feel confident with the code I write and can quickly debug any problems. So let’s step back for a minute and learn how to declare and call basic blocks.</p>
+<h3>Block Basics</h3>
+<p>A block is simply a chunk of executable code. For example, here’s a block that prints the current date and time:</p>
+<pre class="brush: objc">^ {
+    NSDate *date = [NSDate date];
+    NSLog(@"The date and time is %@", date);
+};
+</pre>
+<p>The caret (<code>^</code>) introduces a block literal and the curly braces enclose statements that make up the body of the block. You can think of a block as being similar to an anonymous function.</p>
+
+<p>So if it’s anonymous, how exactly do we use this block? The most common way to use a block is to pass it to a method that in turn calls the block. We saw how to do that earlier with animations and enumeration. The other way to use a block is to assign it to a block variable and call the block directly. Here’s how to assign our block to a block variable called <code>now</code>:</p>
+<pre class="brush: objc">void (^now)(void) = ^ {
+    NSDate *date = [NSDate date];
+    NSLog(@"The date and time is %@", date);
+};
+</pre>
+<p>Here’s where things get funky. The syntax for declaring a block variable takes some getting used to. If you’ve used function pointers, block variables will look familiar. On the right-hand side of the assignment we have our block literal (nothing new there). On the left-hand side of the assignment we’ve declared a block variable called <code>now</code>.</p>
+<div class="graphic">
+<img src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/block-syntax-1.png" height="89" alt="Block Syntax" width="225">
+</div>
+<p>The name of the block variable is always preceded by a <code>^</code> and in parentheses. Block variables have an associated type. In this case, the <code>now</code> variable can reference any block that returns no value (the first <code>void</code>) and takes no parameters (the <code>void</code> in parentheses). Our block conforms to this type, so we can safely assign it to the <code>now</code> variable.</p>
+
+<p>Once we have a block variable in scope, calling the block is just like calling a function. Here’s how we call our block:</p>
+<pre class="brush: objc">now();
+</pre>
+<p>You could declare the block variable in a C function or Objective-C method, for example, and then call it in the same scope. When the block executes, it prints the current date and time. So far, so good.</p>
+<h3>Blocks Are Closures</h3>
+<p>If that’s all there was to blocks, they’d be just like functions. But it turns out that blocks are more than just chunks of executable code. Blocks also capture their surrounding state. That is, blocks are closures: they <em>close around</em> variables that are in scope at the time the block is declared. To illustrate, let’s change the previous example around a bit by moving the initialization of the date outside the block:</p>
+<pre class="brush: objc">NSDate *date = [NSDate date];
+
+void (^now)(void) = ^ {
+    NSLog(@"The date and time is %@", date);
+};
+
+now();
+</pre>
+<p>When you call this block the first time, it behaves exactly like the previous version: it prints the current date and time. But there’s a significant difference here. It becomes evident when we change the date and then call the block again:</p>
+<pre class="brush: objc"> sleep(5);
+
+ date = [NSDate date];
+  
+ now();
+</pre>
+<p>Even though we’ve changed the <code>date</code> variable referenced by the block, when the block is called it still prints the original date and time. It’s as if time stood still when the block was declared. And that’s effectively what happens. As execution passes over the point where the block is declared, the block takes a (read-only) snapshot of all the variables in scope that the block uses. You can think of the value of the <code>date</code> variable as being frozen inside the block. Therefore, whenever the block is called—immediately, 5 seconds later, or just before the app quits—it always prints the original date and time.</p>
+
+<p>Now, the fact that blocks are closures is not particularly interesting in this example. After all, you could have just passed the date as a parameter to the block (more on that next). But closures become really useful when you start passing blocks around to methods because the captured state goes along for the ride.</p>
+<h3>Block Parameters</h3>
+<p>Just like functions, blocks can take parameters and return values. Say, for example, we want a block that takes a given number and returns the result of tripling that number. Here’s the block literal:</p>
+<pre class="brush: objc">^(int number) {
+    return number * 3;
+};
+</pre>
+<p>Assigning this block to a block variable called <code>triple</code> looks like this:</p>
+<pre class="brush: objc">int (^triple)(int) = ^(int number) {
+    return number * 3;
+};
+</pre>
+<p>Again, the tricky part is getting comfortable with the block variable syntax on the left-hand side of the assignment. Let’s break it down from left to right.</p>
+<div class="graphic">
+<img src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/block-syntax-2.png" height="82" alt="Block Syntax" width="225">
+</div>
+<p>The first <code>int</code> is the return type. Then in parentheses comes the caret introducing the block variable called <code>triple</code>. Finally we have a list of parameter types in parentheses (one <code>int</code> in this case). The block literal on the right-hand side of the assignment conforms to this type. Note, however, that as a matter of convenience there’s no need to declare the return type of the block literal. The compiler can infer it from the return statement.</p>
+
+<p>To call the block, you need to pass the number to be tripled and (ideally) do something with the return value, like so:</p>
+<pre class="brush: objc">int result = triple(2);
+</pre>
+<p>By way of comparison, here’s how you would declare and create a block that takes two <code>int</code> parameters, multiplies them together, and returns the result as an <code>int</code> value:</p>
+<pre class="brush: objc">int (^multiply)(int, int) = ^(int x, int y) {
+    return x * y;
+};
+</pre>
+<p>And here’s how you’d call this block:</p>
+<pre class="brush: objc">int result = multiply(2, 3);
+</pre>
+<p>Declaring block variables gave us an opportunity to explore block types and how to call blocks. The block variable looks like a function pointer and calling the block is similar to calling a function. But unlike function pointers, blocks are actually Objective-C objects. And that means we can pass them around like other objects.</p>
+<h3>Methods Can Take Blocks</h3>
+<p>Now, in practice blocks are most useful when you pass them as parameters to methods that in turn call the block. And when you’re passing a block to a method, it’s usually more convenient to use inline blocks rather than assigning the block to a typed variable and then passing it to the method. For instance, we used inline blocks in the animation and enumeration examples we saw earlier.</p>
+
+<p>Apple has added methods to their frameworks that take blocks, and you can write APIs that take blocks, too. For example, suppose we want to create a <code>Worker</code> class method that takes a block and repeatedly calls it a given number of times, passing in the repeat count each time. Here’s how we might call that method with an inline block that triples each number (1 through 10):</p>
+<pre class="brush: objc">[Worker repeat:10 withBlock:^(int number) {
+    return number * 3;
+}];
+</pre>
+<p>The method could handle any block that takes a single <code>int</code> parameter and returns an <code>int</code> result. Want to double all the numbers? Just give the method a different block.</p>
+<h3>Your Turn</h3>
+<p>OK, so how would you implement the <code>repeat:withBlock:</code> method above to accept and call a passed block? Give it some thought, and we’ll tackle it in the <a href="http://pragmaticstudio.com/blog/2010/9/15/ios4-blocks-2">next installment</a>. In the meantime, practice using blocks by calling the <code>enumerateKeysAndObjectsUsingBlock:</code> method with a block that prints the keys and values of this <code>NSDictionary</code>:</p>
+<pre class="brush: objc">NSDictionary *cards = 
+    [NSDictionary dictionaryWithObjectsAndKeys:@"Queen",  @"card", 
+                                               @"Hearts", @"suit", 
+                                               @"10",     @"value", nil];
+</pre>
+<p>Have fun, and <a href="http://feeds.feedburner.com/PragmaticStudio">stay tuned</a> for more on blocks…</p>
+	  </div>
+	  <div class="extras">
+  	  <img alt="Twitter" height="16" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/twitter-icon.png" width="16"> 
+  	  <a href="http://twitter.com/home?status=@pragmaticstudio%20Using%20Blocks%20in%20iOS%204:%20The%20Basics:%20http://pragmaticstudio.com/blog/2010/7/28/ios4-blocks-1">Tweet It</a> | 
+  	  <a href="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/The Pragmatic Studio   Using Blocks in iOS 4  The Basics.htm">Permalink</a> 
+  	    | <a href="http://pragmaticstudio.com/blog/2010/7/28/ios4-blocks-1#disqus_thread">Comments</a>
+  	</div>
+  </div>
+</div>
+
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/shCore.js" type="text/javascript"></script>
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/shBrushRuby.js" type="text/javascript"></script>
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/shBrushBash.js" type="text/javascript"></script>
+<script src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/shBrushObjectiveC.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all();
+</script>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://pragmaticstudio.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript=pragmaticstudio"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script type="text/javascript">
+var disqus_shortname = 'pragmaticstudio';
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'http://disqus.com/forums/pragmaticstudio/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+            </div>
+          </div>
+            <hr class="hidden">
+            <div id="sidebar-wrapper">
+              <div id="sidebar">
+                <h3>Recent Posts</h3>
+<ul class="menu">
+  <li><a href="http://pragmaticstudio.com/blog/2011/1/24/early-bird-march">Early-Bird Discounts End Monday</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2011/1/11/march2011studios">Rails, Rails II, and iPhone Studios in March 2011</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2011/1/10/trackpro">Practicing What We Teach</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2011/1/3/stereomatic">Alumni App Spotlight: StereoMatic</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2010/11/29/announcing-rails-ii">Announcing the Ruby on Rails II Studio</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2010/11/22/why-we-teach">Why We Teach</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2010/11/2/january-2011-studios">January 2011 Studios</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2010/11/1/rubyconf-2010">Meet Us At RubyConf</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2010/10/15/matt-ted-app">Matt and TED's Excellent Adventure</a></li>  
+  <li><a href="http://pragmaticstudio.com/blog/2010/9/28/10-new-jobs">10 New Jobs on the Job Board</a></li>  
+</ul>
+
+<ul class="menu">
+  <li><a href="http://pragmaticstudio.com/blog/archive">Archive</a></li>  
+  <li>
+    <a href="http://feeds.feedburner.com/PragmaticStudio">
+      RSS Feed&nbsp;&nbsp;<img alt="RSS" height="16" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/feed-icon.gif" width="16">
+      </a>
+  </li>
+</ul>
+
+<h3>Public Studio Schedule</h3>
+
+<div class="box rounded" style="margin-top: 10px">
+  <p style="line-height: 20px;">
+    <span class="course-name"><a href="http://pragmaticstudio.com/rails">Ruby on Rails</a></span><br>
+    <span class="course-dates">March 29-31, 2011 in Reston, VA</span>
+  </p>
+  <p style="line-height: 20px;">
+   <span class="course-name"><a href="http://pragmaticstudio.com/rails-ii">Ruby on Rails II</a></span><br>
+   <span class="course-dates">March 7-10, 2011 in Santa Clara, CA</span>
+  </p>
+  <p style="line-height: 20px;">
+   <span class="course-name"><a href="http://pragmaticstudio.com/iphone">iPhone/iPad Programming</a></span><br>
+   <span class="course-dates">March 7-10, 2011 in Santa Clara, CA</span>
+  </p>
+</div>
+<h3>Keep In Touch</h3>
+<ul class="icon menu">
+  <li>
+    <a href="http://pragmaticstudio.com/notify"><img alt="Mail-icon" height="16" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/mail-icon.gif" width="16">&nbsp;&nbsp;<strong>Get notified</strong> about upcoming events</a>
+  </li>
+  <li>
+    <a href="http://feeds.feedburner.com/PragmaticStudio">
+      <img alt="Blog" height="16" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/feed-icon.gif" width="16">
+      &nbsp;<strong>Subscribe</strong> to our blog</a>
+  </li>
+  <li>
+    <a href="http://twitter.com/pragmaticstudio">
+      <img alt="Twitter" height="16" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/twitter-icon.png" width="16">
+      &nbsp;<strong>Follow us</strong> on Twitter</a>
+  </li>
+  <li>
+    <a href="http://pragmaticstudio.com/upcoming-events.ics"><img alt="Date" height="16" src="./The Pragmatic Studio   Using Blocks in iOS 4  The Basics_files/date.png" width="16">&nbsp;&nbsp;<strong>Add upcoming events</strong> to your iCal</a>
+  </li>
+</ul>
+
+
+              </div>
+            </div>
+        </div>
+        <hr class="hidden">
+        <div id="footer-wrapper">
+          <div id="footer">
+            <div id="site-links">
+  <p>
+    <a href="http://pragmaticstudio.com/about">About Us</a>
+    <span class="separator"> | </span>
+    <a href="http://alumni.pragmaticstudio.com/">Alumni</a>
+    <span class="separator"> | </span>
+    <a href="http://pragmaticstudio.com/screencasts">Bonus Tracks</a>
+    <span class="separator"> | </span>
+    <a href="http://pragmaticstudio.com/past-events">Past Events</a>
+    <span class="separator"> | </span>
+    <a href="http://pragmaticstudio.com/privacy">Privacy Statement</a>
+    <span class="separator"> | </span>
+    <a href="http://pragmaticstudio.com/terms-of-use">Terms of Use</a>
+  </p>
+</div>
+
+<div id="copyright">
+  <p>
+    Copyright © 2005–2011, The Pragmatic Studio. 
+    All Rights Reserved.
+  </p>
+  <p>
+    We're pleased to have our site hosted by
+    <a href="http://slicehost.com/">Slicehost</a>.
+  </p>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280358-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  
+
+</body></html>

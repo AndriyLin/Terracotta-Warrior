@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0070)http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    prog_guide:actions_special – cocos2d for iPhone  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2010-11-01T00:12:15+0000">
+<meta name="keywords" content="prog_guide,actions_special">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.cocos2d-iphone.org/wiki/lib/exe/opensearch.php" title="cocos2d for iPhone">
+<link rel="start" href="http://www.cocos2d-iphone.org/wiki/">
+<link rel="contents" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.cocos2d-iphone.org/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.cocos2d-iphone.org/wiki/feed.php?mode=list&ns=prog_guide">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=export_xhtml">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=export_raw">
+<link rel="canonical" href="./prog_guide actions_special – cocos2d for iPhone_files/prog_guide actions_special – cocos2d for iPhone.htm">
+<link rel="stylesheet" media="screen" type="text/css" href="./prog_guide actions_special – cocos2d for iPhone_files/css.php">
+<link rel="stylesheet" media="all" type="text/css" href="./prog_guide actions_special – cocos2d for iPhone_files/css(1).php">
+<link rel="stylesheet" media="print" type="text/css" href="./prog_guide actions_special – cocos2d for iPhone_files/css(2).php">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+var NS='prog_guide';var JSINFO = {"id":"prog_guide:actions_special","namespace":"prog_guide"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="./prog_guide actions_special – cocos2d for iPhone_files/js.php"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+//--><!]]></script><script src="./prog_guide actions_special – cocos2d for iPhone_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var pageTracker = _gat._getTracker("UA-871936-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+//--><!]]></script>
+
+  <link rel="shortcut icon" href="http://www.cocos2d-iphone.org/wiki/lib/tpl/A_Centered_Perspective/images/favicon.ico">
+
+  
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+<body class="dw-left">
+<div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+
+<div id="menubar" class="dokuwiki">   
+   
+		<a href="http://www.cocos2d-iphone.org/wiki/doku.php/" name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle">cocos2d for iPhone</a>		<form action="http://www.cocos2d-iphone.org/wiki/doku.php/" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>		 
+            <div class="action-menus">
+        <div class="action-menu">
+			<div class="action-menu-title">
+				⚙
+			</div>
+			<div class="action-menu-content">
+          <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=edit&rev=" class="action source" accesskey="v" rel="nofollow" title="Show pagesource">Show pagesource</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions">Old revisions</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=backlink" class="action backlink" accesskey="" rel="nofollow" title="Backlinks">Backlinks</a>			</div>
+        </div>
+        <div class="action-menu">
+        <div class="action-menu-title">
+			⚒
+		</div>
+		<div class="action-menu-content"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes">Recent changes</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap">Sitemap</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special?do=login&sectok=0938ca5b2a987045f28dcadbcdcb6d9e" class="action login" accesskey="" rel="nofollow" title="Login">Login</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="wrapper" class="dokuwiki">
+
+    	
+
+
+    
+
+
+      
+
+    
+    
+    
+              <div class="left-sidebar">
+			<div class="menu">
+		  		<ul>
+
+</ul>
+			</div>
+          <div class="main_sidebar sidebar-box">
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/resources:official-cocos-icon-angry.png?id=wiki%3Asidebar" class="media" title="resources:official-cocos-icon-angry.png"><img src="./prog_guide actions_special – cocos2d for iPhone_files/resources-official-cocos-icon-angry.png" class="media" alt="" width="64"></a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/start" class="wikilink1" title="start">Wiki Home</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="wikilink1" title="prog_guide:index">Programming Guide</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/" class="urlextern" title="http://www.cocos2d-iphone.org" rel="nofollow">Blog</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/forum" class="urlextern" title="http://www.cocos2d-iphone.org/forum" rel="nofollow">Forum</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/games" class="urlextern" title="http://www.cocos2d-iphone.org/games" rel="nofollow">Games</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/store" class="urlextern" title="http://www.cocos2d-iphone.org/store" rel="nofollow">Store</a>
+</p>
+
+</div>
+        </div>
+        <div class="right-page">
+          <div id="page"><!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header" style="cursor: pointer; "><span id="toc__toggle" style="cursor: pointer; " class="toc_close"><span>−</span></span>Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special#special_actions" class="toc">Special Actions</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special#callfunc_callblock_family_action" class="toc">CallFunc / CallBlock Family Action</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special#callfunc" class="toc">CallFunc</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special#callfuncn_and_callfuncnd_actions" class="toc">CallFuncN and CallFuncND Actions</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special#callblock_callblockn" class="toc">CallBlock / CallBlockN</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special#ccfollow" class="toc">CCFollow</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special#ccpropertyaction" class="toc">CCPropertyAction</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1"><a name="special_actions" id="special_actions">Special Actions</a></h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2"><a name="callfunc_callblock_family_action" id="callfunc_callblock_family_action">CallFunc / CallBlock Family Action</a></h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit3"><a name="callfunc" id="callfunc">CallFunc</a></h3>
+<div class="level3">
+
+<p>
+The <code>CCCallFunc</code> Action allows you to call a method from an action. Can be useful at the end of a sequence action.
+</p>
+
+<p>
+Example:
+
+</p>
+<pre class="code objc"><span class="kw4">id</span> actionTo <span class="sy0">=</span> <span class="br0">[</span>CCMoveTo actionWithDuration<span class="sy0">:</span> <span class="nu0">2</span> position<span class="sy0">:</span> ccp<span class="br0">(</span>s.width<span class="sy0">-</span><span class="nu0">40</span>, s.height<span class="sy0">-</span><span class="nu0">40</span><span class="br0">)</span><span class="br0">]</span>;
+<span class="kw4">id</span> actionBy <span class="sy0">=</span> <span class="br0">[</span>CCMoveBy actionWithDuration<span class="sy0">:</span> <span class="nu0">2</span> position<span class="sy0">:</span> ccp<span class="br0">(</span><span class="nu0">80</span>,<span class="nu0">80</span><span class="br0">)</span><span class="br0">]</span>;
+<span class="kw4">id</span> actionCallFunc <span class="sy0">=</span> <span class="br0">[</span>CCCallFunc actionWithTarget<span class="sy0">:</span>self selector<span class="sy0">:</span><span class="kw1">@selector</span><span class="br0">(</span>doATask<span class="br0">)</span><span class="br0">]</span>;
+&nbsp;
+<span class="kw4">id</span> actionSequence <span class="sy0">=</span> <span class="br0">[</span>CCSequence actions<span class="sy0">:</span> actionTo, actionBy, actionCallFunc, <span class="kw2">nil</span><span class="br0">]</span>;
+&nbsp;
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> doATask
+<span class="br0">{</span>
+<span class="co2">//some code</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h3 class="sectionedit4"><a name="callfuncn_and_callfuncnd_actions" id="callfuncn_and_callfuncnd_actions">CallFuncN and CallFuncND Actions</a></h3>
+<div class="level3">
+
+<p>
+
+There are two variations of <code>CCCallFunc</code>. They are <code>CCCallFuncN</code> and <code>CCCallFuncND</code>.
+</p>
+
+<p>
+<code>CCCallFuncN</code> takes the node as an argument, and <code>CCCallFuncND</code> takes the node and a pointer to some data.
+</p>
+
+<p>
+Example:
+
+</p>
+<pre class="code objc"><span class="kw4">id</span> actionCallFuncN <span class="sy0">=</span> <span class="br0">[</span>CCCallFuncN actionWithTarget<span class="sy0">:</span>self selector<span class="sy0">:</span><span class="kw1">@selector</span><span class="br0">(</span>doATaskN<span class="sy0">:</span><span class="br0">)</span><span class="br0">]</span>; <span class="co2">// make sure you notice the trailing :</span>
+<span class="kw4">id</span> actionCallFuncND <span class="sy0">=</span> <span class="br0">[</span>CCCallFuncND actionWithTarget<span class="sy0">:</span>self selector<span class="sy0">:</span><span class="kw1">@selector</span><span class="br0">(</span>doATaskND<span class="sy0">:</span>data<span class="sy0">:</span><span class="br0">)</span> data<span class="sy0">:</span>pointerToSomeData<span class="br0">]</span>;
+&nbsp;
+<span class="sy0">-</span> <span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> doATaskN<span class="sy0">:</span> <span class="br0">(</span><span class="kw4">id</span><span class="br0">)</span>node
+<span class="br0">{</span>
+<span class="co2">//some code</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="sy0">-</span> <span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> doATaskND<span class="sy0">:</span> <span class="br0">(</span><span class="kw4">id</span><span class="br0">)</span>node data<span class="sy0">:</span><span class="br0">(</span><span class="kw4">void</span><span class="sy0">*</span><span class="br0">)</span>d
+<span class="br0">{</span>
+<span class="co2">//some code</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h3 class="sectionedit5"><a name="callblock_callblockn" id="callblock_callblockn">CallBlock / CallBlockN</a></h3>
+<div class="level3">
+
+<p>
+
+since v0.99.2
+</p>
+<pre class="code objc"><span class="co2">// BCA is cocos2d macro that means: Block Copy Autorelease</span>
+&nbsp;
+<span class="co2">// CCCallBlock (no arguments)</span>
+<span class="kw4">id</span> blockAction <span class="sy0">=</span> <span class="br0">[</span>CCCallBlock actionWithBlock<span class="sy0">:</span>BCA<span class="br0">(</span><span class="sy0">^</span><span class="br0">{</span>
+			<span class="br0">[</span>label setString<span class="sy0">:</span><span class="co3">@</span><span class="st0">"Called Block!"</span><span class="br0">]</span>;
+		<span class="br0">}</span><span class="br0">)</span><span class="br0">]</span>;
+&nbsp;
+<span class="co2">// CCCallBlockN (passes the Node as an argument)</span>
+<span class="kw4">void</span> <span class="br0">(</span><span class="sy0">^</span>block<span class="br0">)</span><span class="br0">(</span>CCNode<span class="sy0">*</span><span class="br0">)</span> <span class="sy0">=</span>  BCA<span class="br0">(</span><span class="sy0">^</span><span class="br0">(</span>CCNode <span class="sy0">*</span>n<span class="br0">)</span> <span class="br0">{</span>
+		<span class="co2">// do something generic with node</span>
+		CCLOG<span class="br0">(</span><span class="co3">@</span><span class="st0">"called block for %@"</span>, n<span class="br0">)</span>;
+<span class="br0">}</span><span class="br0">)</span>;
+<span class="kw4">id</span> blockAction2 <span class="sy0">=</span> <span class="br0">[</span>CCCallBlockN actionWithBlock<span class="sy0">:</span>block<span class="br0">]</span></pre>
+
+</div>
+
+<h2 class="sectionedit6"><a name="ccfollow" id="ccfollow">CCFollow</a></h2>
+<div class="level2">
+
+<p>
+
+since v0.99.2
+</p>
+
+<p>
+Simulates a “Camera”.  The followed node will be centered.
+</p>
+<pre class="code objc"><span class="co2">// create an sprite</span>
+<span class="kw4">id</span> sprite <span class="sy0">=</span> <span class="br0">[</span>CCSprite xxxx<span class="br0">]</span>;
+&nbsp;
+<span class="br0">[</span>self addChild<span class="sy0">:</span>sprite<span class="br0">]</span>;
+&nbsp;
+<span class="br0">[</span>self runAction<span class="sy0">:</span> <span class="br0">[</span>CCFollow actionWithTarget<span class="sy0">:</span>sprite worldBoundary<span class="sy0">:</span>CGRectMake<span class="br0">(</span><span class="nu0">0</span>, <span class="nu0">0</span>, <span class="br0">(</span>winSize.width<span class="sy0">*</span><span class="nu0">2</span><span class="br0">)</span><span class="sy0">-</span><span class="nu0">100</span>, winSize.height<span class="br0">)</span><span class="br0">]</span><span class="br0">]</span>;</pre>
+
+</div>
+
+<h2 class="sectionedit7"><a name="ccpropertyaction" id="ccpropertyaction">CCPropertyAction</a></h2>
+<div class="level2">
+
+<p>
+
+since v0.99.2
+</p>
+
+<p>
+It's a “generic” action that lets you modify any property of any objective-c class.
+</p>
+<pre class="code objc"> <span class="co2">// It will modify the "rotation" property from 0 to -270 in 2 seconds, and then it will run the reverse action.</span>
+	<span class="kw4">id</span> rot <span class="sy0">=</span> <span class="br0">[</span>CCPropertyAction actionWithDuration<span class="sy0">:</span><span class="nu0">2</span> key<span class="sy0">:</span><span class="co3">@</span><span class="st0">"rotation"</span> from<span class="sy0">:</span><span class="nu0">0</span> to<span class="sy0">:-</span><span class="nu0">270</span><span class="br0">]</span>;
+	<span class="kw4">id</span> rot_back <span class="sy0">=</span> <span class="br0">[</span>rot reverse<span class="br0">]</span>;
+	<span class="kw4">id</span> rot_seq <span class="sy0">=</span> <span class="br0">[</span>CCSequence actions<span class="sy0">:</span>rot, rot_back, <span class="kw2">nil</span><span class="br0">]</span>;</pre>
+
+</div>
+
+	
+	
+			<div class="meta">
+			  <div class="user">
+			  			  </div>
+			  <div class="doc">
+			  prog_guide/actions_special.txt · Last modified: 2010/11/01 00:12 by gurghet			  </div>
+			</div>
+	
+	</div>
+        </div>
+      
+    
+
+
+     
+    <div id="trail">
+      <span class="bchead">Trace:</span> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="breadcrumbs" title="prog_guide:index">index</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_ease" class="breadcrumbs" title="prog_guide:actions_ease">actions_ease</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:effects" class="breadcrumbs" title="prog_guide:effects">effects</a> <span class="bcsep"></span> <span class="curid"><a href="./prog_guide actions_special – cocos2d for iPhone_files/prog_guide actions_special – cocos2d for iPhone.htm" class="breadcrumbs" title="prog_guide:actions_special">actions_special</a></span>    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+<div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./prog_guide actions_special – cocos2d for iPhone_files/cc-by-nc-sa.png" class="medialeft licbutton" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a> </div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./prog_guide actions_special – cocos2d for iPhone_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./prog_guide actions_special – cocos2d for iPhone_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./prog_guide actions_special – cocos2d for iPhone_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./prog_guide actions_special – cocos2d for iPhone_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="http://www.cocos2d-iphone.org/wiki/feed.php" title="Recent changes RSS feed"><img src="./prog_guide actions_special – cocos2d for iPhone_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./prog_guide actions_special – cocos2d for iPhone_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+
+<div class="no"><img src="./prog_guide actions_special – cocos2d for iPhone_files/indexer.php" width="1" height="1" alt=""></div>
+
+
+</body></html>

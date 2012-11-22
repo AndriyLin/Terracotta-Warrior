@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0065)http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    prog_guide:tiled_maps – cocos2d for iPhone  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2010-11-12T03:59:23+0000">
+<meta name="keywords" content="prog_guide,tiled_maps">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.cocos2d-iphone.org/wiki/lib/exe/opensearch.php" title="cocos2d for iPhone">
+<link rel="start" href="http://www.cocos2d-iphone.org/wiki/">
+<link rel="contents" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.cocos2d-iphone.org/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.cocos2d-iphone.org/wiki/feed.php?mode=list&ns=prog_guide">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=export_xhtml">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=export_raw">
+<link rel="canonical" href="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide tiled_maps – cocos2d for iPhone.htm">
+<link rel="stylesheet" media="screen" type="text/css" href="./prog_guide tiled_maps – cocos2d for iPhone_files/css.php">
+<link rel="stylesheet" media="all" type="text/css" href="./prog_guide tiled_maps – cocos2d for iPhone_files/css(1).php">
+<link rel="stylesheet" media="print" type="text/css" href="./prog_guide tiled_maps – cocos2d for iPhone_files/css(2).php">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+var NS='prog_guide';var JSINFO = {"id":"prog_guide:tiled_maps","namespace":"prog_guide"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="./prog_guide tiled_maps – cocos2d for iPhone_files/js.php"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+//--><!]]></script><script src="./prog_guide tiled_maps – cocos2d for iPhone_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+var pageTracker = _gat._getTracker("UA-871936-7");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+//--><!]]></script>
+
+  <link rel="shortcut icon" href="http://www.cocos2d-iphone.org/wiki/lib/tpl/A_Centered_Perspective/images/favicon.ico">
+
+  
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+<body class="dw-left">
+<div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+
+<div id="menubar" class="dokuwiki">   
+   
+		<a href="http://www.cocos2d-iphone.org/wiki/doku.php/" name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle">cocos2d for iPhone</a>		<form action="http://www.cocos2d-iphone.org/wiki/doku.php/" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>		 
+            <div class="action-menus">
+        <div class="action-menu">
+			<div class="action-menu-title">
+				⚙
+			</div>
+			<div class="action-menu-content">
+          <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=edit&rev=" class="action source" accesskey="v" rel="nofollow" title="Show pagesource">Show pagesource</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions">Old revisions</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=backlink" class="action backlink" accesskey="" rel="nofollow" title="Backlinks">Backlinks</a>			</div>
+        </div>
+        <div class="action-menu">
+        <div class="action-menu-title">
+			⚒
+		</div>
+		<div class="action-menu-content"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes">Recent changes</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap">Sitemap</a><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps?do=login&sectok=0938ca5b2a987045f28dcadbcdcb6d9e" class="action login" accesskey="" rel="nofollow" title="Login">Login</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="wrapper" class="dokuwiki">
+
+    	
+
+
+    
+
+
+      
+
+    
+    
+    
+              <div class="left-sidebar">
+			<div class="menu">
+		  		<ul>
+
+</ul>
+			</div>
+          <div class="main_sidebar sidebar-box">
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/resources:official-cocos-icon-angry.png?id=wiki%3Asidebar" class="media" title="resources:official-cocos-icon-angry.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/resources-official-cocos-icon-angry.png" class="media" alt="" width="64"></a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/start" class="wikilink1" title="start">Wiki Home</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="wikilink1" title="prog_guide:index">Programming Guide</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/" class="urlextern" title="http://www.cocos2d-iphone.org" rel="nofollow">Blog</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/forum" class="urlextern" title="http://www.cocos2d-iphone.org/forum" rel="nofollow">Forum</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/games" class="urlextern" title="http://www.cocos2d-iphone.org/games" rel="nofollow">Games</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/store" class="urlextern" title="http://www.cocos2d-iphone.org/store" rel="nofollow">Store</a>
+</p>
+
+</div>
+        </div>
+        <div class="right-page">
+          <div id="page"><!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header" style="cursor: pointer; "><span id="toc__toggle" style="cursor: pointer; " class="toc_close"><span>−</span></span>Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#tiled_maps" class="toc">Tiled Maps</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#tmx_tile_map_format" class="toc">TMX Tile Map format</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#how_to_create_embedded_tilesets_with_external_images" class="toc">How to create embedded tilesets with external images</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#coordinates_and_gids" class="toc">Coordinates and GIDS</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#how_to_create_a_tmx_node" class="toc">How to create a TMX node</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#how_to_get_add_delete_modify_a_tile" class="toc">How to get/add/delete/modify a tile</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#z_order_and_depth_buffer" class="toc">z order and depth buffer</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#screenshots" class="toc">Screenshots</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#pgu_tile_map_format" class="toc">PGU Tile Map Format</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1"><a name="tiled_maps" id="tiled_maps">Tiled Maps</a></h1>
+<div class="level1">
+
+<p>
+
+There are 2 ways of creating tiled maps in cocos2d.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> by using the TMX Tile Map format (newer, more flexible, recommended)</div>
+</li>
+<li class="level1"><div class="li"> by using the PGU Tile Map format (older, deprecated)</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2"><a name="tmx_tile_map_format" id="tmx_tile_map_format">TMX Tile Map format</a></h2>
+<div class="level2">
+
+<p>
+
+cocos2d supports maps created with <a href="http://mapeditor.org/" class="urlextern" title="http://mapeditor.org" rel="nofollow">Tiled</a>.
+</p>
+
+<p>
+<code>Tiled</code> has 2 versions:
+</p>
+<ul>
+<li class="level1"><div class="li"> A java application that runs on Mac <acronym title="Operating System">OS</acronym> X, Windows and Linux, which is the stable version</div>
+</li>
+<li class="level1"><div class="li"> A QT (native) application that supports almost all the features of the java version. As of this writing, the latest QT version is 0.4.0 and supports everything but hexagonal maps</div>
+</li>
+</ul>
+
+<p>
+This page explains how to create a map using <code>Tiled</code>:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://sourceforge.net/apps/mediawiki/tiled/index.php?title=Creating_a_simple_map_with_Tiled" class="urlextern" title="https://sourceforge.net/apps/mediawiki/tiled/index.php?title=Creating_a_simple_map_with_Tiled" rel="nofollow">Creating a single map with Tiled</a></div>
+</li>
+</ul>
+
+<p>
+
+cocos2d supports the following TMX maps:
+</p>
+<ul>
+<li class="level1"><div class="li"> Orientation:</div>
+<ul>
+<li class="level2"><div class="li"> Orthogonal maps</div>
+</li>
+<li class="level2"><div class="li"> Isometric maps</div>
+</li>
+<li class="level2"><div class="li"> Hexagonal maps (edges on left-right. edges at top-bottom are not supported… it seems that <code>Tiled</code> doesn't support them either)</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Tiles:</div>
+<ul>
+<li class="level2"><div class="li"> Embedded tiles are NOT supported (i.e., tilesets with embedded images).</div>
+</li>
+<li class="level2"><div class="li"> Only <code>embedded</code> tilesets are supported (i.e., the tileset is embedded, but not its images).</div>
+</li>
+<li class="level2"><div class="li"> supports at most 1 tileset per layer.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Layers:</div>
+<ul>
+<li class="level2"><div class="li"> You can have as many layers are you want</div>
+</li>
+<li class="level2"><div class="li"> Each layer will be represented internally by a <code>CCTMXLayer</code> (which is a subclass of <code>CCSpriteSheet</code>)</div>
+</li>
+<li class="level2"><div class="li"> Each tile will be represented by an <code>CCSprite</code> (its parent will be the <code>CCTMXLayer</code>)</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Object Groups:</div>
+<ul>
+<li class="level2"><div class="li"> Tiled objectGroups are supported as well</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit3"><a name="how_to_create_embedded_tilesets_with_external_images" id="how_to_create_embedded_tilesets_with_external_images">How to create embedded tilesets with external images</a></h3>
+<div class="level3">
+
+<p>
+
+cocos2d doesn't support embedded images in tilesets (but requires tilesets themselves to be embedded in the map file). Instead you should create a <code>sprite sheet</code> image (AKA: Texture Atlas) by yourself.
+</p>
+
+</div>
+
+<h4><a name="setting_the_tiled_preferences" id="setting_the_tiled_preferences">Setting the Tiled preferences</a></h4>
+<div class="level4">
+
+<p>
+
+Tell <code>tiled</code> to NOT save the tileset with embedded images:
+
+</p>
+<pre class="code">$ cd bin/tiled-0.7.2/
+$ java -jar tiled</pre>
+
+<p>
+
+Once in tiled, you should do:
+</p>
+<ul>
+<li class="level1"><div class="li"> Edit → Preferences → Saving</div>
+</li>
+<li class="level1"><div class="li"> Layer Options: </div>
+<ul>
+<li class="level2"><div class="li"> Use binary encoding: ON (“text” encoding is not supported by cocos2d)</div>
+</li>
+<li class="level2"><div class="li"> Compress layer data: ON (non-compressed data is also supported)</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Tileset Options:</div>
+<ul>
+<li class="level2"><div class="li"> Embed images (<acronym title="Portable Network Graphics">PNG</acronym>): OFF (Embedding images is not supported)</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tiled_preferences.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tiled_preferences.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tiled_preferences.png" class="media" title="Tiled Preferences" alt="Tiled Preferences"></a>
+</p>
+
+<p>
+Note that when creating a new map, <code>Map Size</code> refers to the number of tiles vertically and horizontally, and not the pixel dimensions of your map.  Note that there are limits to the size map the iPhone will support <em> (user comment: we have seen 100 x 100 at 44px by 44px as working, but 400 x 200 not work - the tiles are all drawn black) </em>
+</p>
+
+</div>
+
+<h4><a name="making_sure_a_tileset_is_embedded" id="making_sure_a_tileset_is_embedded">Making sure a tileset is embedded</a></h4>
+<div class="level4">
+
+<p>
+
+The tilesets for your map must be embedded into the map file.  In Tiled this is controlled in the “Tileset Manager” (accessed via: Tilesets → Tileset Manager ).  You should see ”(Embedded)” in the column to the right of the tileset name in the list of tilesets.  If you instead see a path string, you need to select that row in the list and then select the Embed icon to the right which will convert it to an embedded tileset.
+</p>
+
+<p>
+If you are using a different tool or want to confirm for yourself you can open the *.tmx file in a text or <acronym title="Extensible Markup Language">XML</acronym> editor and check the <code>&lt;tileset&gt;</code> node.  If it contains a <code>source</code> property with a file name you are looking at an external tileset which will not work with cocos2d-iphone.
+</p>
+
+</div>
+
+<h4><a name="creating_sprite_sheets" id="creating_sprite_sheets">Creating sprite sheets</a></h4>
+<div class="level4">
+
+<p>
+There are some image packers that might be useful:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/cocos2d/cocos2d-iphone/blob/master/tools/mkatlas.pl" class="urlextern" title="http://github.com/cocos2d/cocos2d-iphone/blob/master/tools/mkatlas.pl" rel="nofollow">mkatlas.pl</a> a command line texture atlas creator (shipped with cocos2d) (free)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://slick.cokeandcode.com/demos/packer.jnlp" class="urlextern" title="http://slick.cokeandcode.com/demos/packer.jnlp" rel="nofollow">Packer</a> a visual texture atlas creator (free)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.imagemagick.org/" class="urlextern" title="http://www.imagemagick.org/" rel="nofollow">Image Magic</a> A command line utility (free)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://zwoptexapp.com/" class="urlextern" title="http://zwoptexapp.com/" rel="nofollow">zwoptex</a> a visual texture atlas creator (free &amp; commercial)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://code-and-web.de/texturepacker" class="urlextern" title="http://code-and-web.de/texturepacker" rel="nofollow">TexturePacker</a> Graphical Userinterface + Command line (free &amp; commercial)</div>
+</li>
+</ul>
+
+<p>
+
+These tools let you create <code>sprite sheets</code> from individual images. 
+</p>
+
+<p>
+Limitations of the sprite sheet:
+</p>
+<ul>
+<li class="level1"><div class="li"> Max size: 2048×2048 on iPhone 3GS and 1024×1024 on older iPhones</div>
+</li>
+<li class="level1"><div class="li"> The tiles should all have the same size</div>
+</li>
+</ul>
+
+<p>
+Options:
+</p>
+<ul>
+<li class="level1"><div class="li"> margin: the space in pixels in the margins</div>
+</li>
+<li class="level1"><div class="li"> spacing: the space in pixels between the tiles</div>
+</li>
+</ul>
+
+<p>
+
+It is recommended that you use a <code>margin</code> of 2, and <code>spacing</code> of 2
+</p>
+
+</div>
+
+<h4><a name="the_spritesheet_artifact_fixer" id="the_spritesheet_artifact_fixer">The spritesheet artifact fixer</a></h4>
+<div class="level4">
+
+<p>
+If you experience lines flickering between the borders of your tiles when you move your map, this tool will fix that. Please note, these lines don't appear in the simulator, only on devices.
+</p>
+
+<p>
+The <code>spritesheet-artifact-fixer</code> is a little tool that comes with cocos2d that lets you <code>fix</code> your spritesheet.
+</p>
+
+<p>
+What it really does, is to copy the borders of your tiles, into the spacing/margin pixels.
+In theory the spacing/margin pixels should NOT be rendered, but in practice sometimes they are rendered, specially if you use anti-alias textures and a 3D projection.
+</p>
+
+<p>
+How to use this tool:
+
+</p>
+<pre class="code">$ cd cocos2d/tools
+$ python spritesheet-artifact-fixer.py -f spritesheet.png -x 32 -y 32 -m 2 -s 2</pre>
+
+<p>
+An alternative is using <a href="http://code-and-web.de/texturepacker" class="urlextern" title="http://code-and-web.de/texturepacker" rel="nofollow">TexturePacker</a> with the <code>–extrude</code> feature:
+</p>
+<pre class="code">$ TexturePacker *.png --extrude 1 --plist test.plist --sheet test.png</pre>
+
+</div>
+
+<h3 class="sectionedit4"><a name="coordinates_and_gids" id="coordinates_and_gids">Coordinates and GIDS</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="coordinates" id="coordinates">Coordinates</a></h4>
+<div class="level4">
+
+<p>
+The coordinate system used in Tiled in a 64×32 map is:
+</p>
+<ul>
+<li class="level1"><div class="li"> (0,0): top-left corner</div>
+</li>
+<li class="level1"><div class="li"> (63,31): bottom-right corner</div>
+</li>
+</ul>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:picture_2.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:picture_2.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-picture_2.png" class="media" alt=""></a>
+</p>
+
+</div>
+
+<h4><a name="gid" id="gid">GID</a></h4>
+<div class="level4">
+
+<p>
+A tile's GID is the tile's Global IDentifier. It is an <code>unsigned int</code> that goes from 1 until the quantity of tiles.
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tiled_gids.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tiled_gids.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tiled_gids.png" class="media" alt=""></a>
+</p>
+
+<p>
+If you have 5 different tiles then:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>Tile 0</em> will have GID 1</div>
+</li>
+<li class="level1"><div class="li"> <em>Tile 1</em> will have GID 2</div>
+</li>
+<li class="level1"><div class="li"> <em>Tile 2</em> will have GID 3</div>
+</li>
+<li class="level1"><div class="li"> and so on.</div>
+</li>
+</ul>
+
+<p>
+
+The GID 0 is used to represent to empty tile.
+</p>
+
+</div>
+
+<h3 class="sectionedit5"><a name="how_to_create_a_tmx_node" id="how_to_create_a_tmx_node">How to create a TMX node</a></h3>
+<div class="level3">
+<pre class="code objc">CCTMXTiledMap <span class="sy0">*</span>map <span class="sy0">=</span> <span class="br0">[</span>CCTMXTiledMap tiledMapWithTMXFile<span class="sy0">:</span><span class="co3">@</span><span class="st0">"hexa-test.tmx"</span><span class="br0">]</span>;
+<span class="br0">[</span>self addChild<span class="sy0">:</span>map<span class="br0">]</span>;</pre>
+
+<p>
+All the tiles by default will be aliased.
+If you want to create anti-alias tiles, you should do:
+
+</p>
+<pre class="code objc"><span class="co2">// create a TMX map</span>
+CCTMXTiledMap <span class="sy0">*</span>map <span class="sy0">=</span> <span class="br0">[</span>CCTMXTiledMap tiledMapWithTMXFile<span class="sy0">:</span><span class="co3">@</span><span class="st0">"orthogonal-test2.tmx"</span><span class="br0">]</span>;
+<span class="br0">[</span>self addChild<span class="sy0">:</span>map<span class="br0">]</span>;
+&nbsp;
+<span class="co2">// iterate over all the "layers" (atlas sprite managers)</span>
+<span class="co2">// and set them as 'antialias' </span>
+<span class="kw1">for</span><span class="br0">(</span> CCTMXLayer<span class="sy0">*</span> child <span class="kw1">in</span> <span class="br0">[</span>map children<span class="br0">]</span> <span class="br0">)</span> <span class="br0">{</span>
+    <span class="br0">[</span><span class="br0">[</span>child texture<span class="br0">]</span> setAntiAliasTexParameters<span class="br0">]</span>;
+<span class="br0">}</span></pre>
+
+<p>
+Full example:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://code.google.com/p/cocos2d-iphone/source/browse/tags/release-0.99.0/tests/TileMapTest.m" class="urlextern" title="http://code.google.com/p/cocos2d-iphone/source/browse/tags/release-0.99.0/tests/TileMapTest.m" rel="nofollow">tests/TileMapTest.m</a></div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit6"><a name="how_to_get_add_delete_modify_a_tile" id="how_to_get_add_delete_modify_a_tile">How to get/add/delete/modify a tile</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="to_obtain_a_tile_ccsprite_at_a_certain_coordinate" id="to_obtain_a_tile_ccsprite_at_a_certain_coordinate">To obtain a tile (CCSprite) at a certain coordinate</a></h4>
+<div class="level4">
+<pre class="code objc">CCTMXTiledMap <span class="sy0">*</span>map <span class="sy0">=</span> <span class="br0">[</span>CCTMXTiledMap tiledMapWithTMXFile<span class="sy0">:</span><span class="co3">@</span><span class="st0">"orthogonal-test2.tmx"</span><span class="br0">]</span>;		
+CCTMXLayer <span class="sy0">*</span>layer <span class="sy0">=</span> <span class="br0">[</span>map layerNamed<span class="sy0">:</span><span class="co3">@</span><span class="st0">"Layer 0"</span><span class="br0">]</span>;
+&nbsp;
+CCSprite <span class="sy0">*</span>tile <span class="sy0">=</span> <span class="br0">[</span>layer tileAt<span class="sy0">:</span>ccp<span class="br0">(</span><span class="nu0">0</span>,<span class="nu0">63</span><span class="br0">)</span><span class="br0">]</span>;
+tile.anchorPoint <span class="sy0">=</span> ccp<span class="br0">(</span>0.5f, 0.5f<span class="br0">)</span>;</pre>
+
+</div>
+
+<h4><a name="to_obtain_a_tile_s_gid_at_a_certain_coordinate" id="to_obtain_a_tile_s_gid_at_a_certain_coordinate">To obtain a tile's GID at a certain coordinate</a></h4>
+<div class="level4">
+<pre class="code objc">CCTMXTiledMap <span class="sy0">*</span>map <span class="sy0">=</span> <span class="br0">[</span>CCTMXTiledMap tiledMapWithTMXFile<span class="sy0">:</span><span class="co3">@</span><span class="st0">"orthogonal-test2.tmx"</span><span class="br0">]</span>;		
+CCTMXLayer <span class="sy0">*</span>layer <span class="sy0">=</span> <span class="br0">[</span>map layerNamed<span class="sy0">:</span><span class="co3">@</span><span class="st0">"Layer 0"</span><span class="br0">]</span>;
+&nbsp;
+<span class="kw4">unsigned</span> <span class="kw4">int</span> gid <span class="sy0">=</span> <span class="br0">[</span>layer tileGIDAt<span class="sy0">:</span>ccp<span class="br0">(</span><span class="nu0">0</span>,<span class="nu0">63</span><span class="br0">)</span><span class="br0">]</span>;</pre>
+
+</div>
+
+<h4><a name="to_set_a_new_tile_s_gid_s_at_a_certain_coordinate" id="to_set_a_new_tile_s_gid_s_at_a_certain_coordinate">To set a new tile's GID's at a certain coordinate</a></h4>
+<div class="level4">
+<pre class="code objc">CCTMXTiledMap <span class="sy0">*</span>map <span class="sy0">=</span> <span class="br0">[</span>CCTMXTiledMap tiledMapWithTMXFile<span class="sy0">:</span><span class="co3">@</span><span class="st0">"orthogonal-test2.tmx"</span><span class="br0">]</span>;		
+CCTMXLayer <span class="sy0">*</span>layer <span class="sy0">=</span> <span class="br0">[</span>map layerNamed<span class="sy0">:</span><span class="co3">@</span><span class="st0">"Layer 0"</span><span class="br0">]</span>;
+&nbsp;
+<span class="br0">[</span>layer setTileGID<span class="sy0">:</span>gid2 at<span class="sy0">:</span>ccp<span class="br0">(</span><span class="nu0">3</span>,y<span class="br0">)</span><span class="br0">]</span>;</pre>
+
+</div>
+
+<h4><a name="to_remove_a_tile_at_a_certain_coordinate" id="to_remove_a_tile_at_a_certain_coordinate">To remove a tile at a certain coordinate</a></h4>
+<div class="level4">
+<pre class="code objc">CCTMXTiledMap <span class="sy0">*</span>map <span class="sy0">=</span> <span class="br0">[</span>CCTMXTiledMap tiledMapWithTMXFile<span class="sy0">:</span><span class="co3">@</span><span class="st0">"orthogonal-test2.tmx"</span><span class="br0">]</span>;		
+CCTMXLayer <span class="sy0">*</span>layer <span class="sy0">=</span> <span class="br0">[</span>map layerNamed<span class="sy0">:</span><span class="co3">@</span><span class="st0">"Layer 0"</span><span class="br0">]</span>;
+&nbsp;
+<span class="br0">[</span>layer removeTileAt<span class="sy0">:</span>ccp<span class="br0">(</span><span class="nu0">15</span>,<span class="nu0">15</span><span class="br0">)</span><span class="br0">]</span>;</pre>
+
+</div>
+
+<h4><a name="to_iterate_a_layer" id="to_iterate_a_layer">To iterate a Layer</a></h4>
+<div class="level4">
+<pre class="code objc">CCTMXTiledMap <span class="sy0">*</span>map <span class="sy0">=</span> <span class="br0">[</span>CCTMXTiledMap tiledMapWithTMXFile<span class="sy0">:</span><span class="co3">@</span><span class="st0">"orthogonal-test2.tmx"</span><span class="br0">]</span>;		
+CCTMXLayer <span class="sy0">*</span>layer <span class="sy0">=</span> <span class="br0">[</span>map layerNamed<span class="sy0">:</span><span class="co3">@</span><span class="st0">"Layer 0"</span><span class="br0">]</span>;
+&nbsp;
+CGSize s <span class="sy0">=</span> <span class="br0">[</span>layer layerSize<span class="br0">]</span>;
+<span class="kw1">for</span><span class="br0">(</span> <span class="kw4">int</span> x<span class="sy0">=</span><span class="nu0">0</span>; x&lt;s.width;x<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+	<span class="kw1">for</span><span class="br0">(</span> <span class="kw4">int</span> y<span class="sy0">=</span><span class="nu0">0</span>; y&lt; s.height; y<span class="sy0">++</span> <span class="br0">)</span> <span class="br0">{</span>
+		<span class="kw4">unsigned</span> <span class="kw4">int</span> tmpgid <span class="sy0">=</span> <span class="br0">[</span>layer tileGIDAt<span class="sy0">:</span>ccp<span class="br0">(</span>x,y<span class="br0">)</span><span class="br0">]</span>;
+		<span class="br0">[</span>layer setTileGID<span class="sy0">:</span>tmpgid<span class="sy0">+</span><span class="nu0">1</span> at<span class="sy0">:</span>ccp<span class="br0">(</span>x,y<span class="br0">)</span><span class="br0">]</span>;
+	<span class="br0">}</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h3 class="sectionedit7"><a name="z_order_and_depth_buffer" id="z_order_and_depth_buffer">z order and depth buffer</a></h3>
+<div class="level3">
+
+<p>
+
+<em>Information valid on v0.99.1 or newer</em>
+</p>
+
+<p>
+<em>Information valid both for Isometric and Orthogonal maps. NOT valid for Hexagonal maps</em>
+</p>
+
+<p>
+If your game needs  to place the sprites behind/in front of certain tiles according to the sprites' Y position (a common scenario in isometric maps, and in some orthogonal maps too), then you have 2 options:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Use OpenGL ES depth buffer</div>
+</li>
+<li class="level1"><div class="li"> Use multiple TMX Layers and z-order</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="using_depth_buffer" id="using_depth_buffer">Using Depth Buffer</a></h4>
+<div class="level4">
+
+<p>
+
+This option uses the OpenGL ES depth buffer. So, the 1st thing that you must do, is to create a z-buffer and a 2D projection
+
+</p>
+<pre class="code objc"><span class="co2">// Place this code in your AppDelegate, before attaching the director to the window view.</span>
+<span class="co2">// you can use a 24-bit buffer too with: kDepthBuffer24</span>
+<span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> setDepthBufferFormat<span class="sy0">:</span>kDepthBuffer16<span class="br0">]</span>;
+&nbsp;
+<span class="co2">// You can place this code anywhere you want. You can change the projection in runtime</span>
+<span class="br0">[</span><span class="br0">[</span>CCDirector sharedDirector<span class="br0">]</span> setProjection<span class="sy0">:</span>CCDirectorProjection2D<span class="br0">]</span>;</pre>
+
+<p>
+It is also very important to create a map with 2 TMX Layers
+</p>
+<ul>
+<li class="level1"><div class="li"> A background layer. eg: <em>grass</em></div>
+</li>
+<li class="level1"><div class="li"> A foreground layer. eg: <em>trees</em></div>
+</li>
+</ul>
+
+<p>
+
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tmxlayers.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tmxlayers.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tmxlayers.png" class="media" alt="" width="200"></a>
+</p>
+
+<p>
+The <em>grass</em> layer will be behind the sprites, so its vertexZ value should be the lowest possible value. eg:-1000.
+The <em>trees</em> layer should have different vertexZ values for the tiles. Tiles that are at the bottom should have higher vertexZ than the tiles that are at the top.
+</p>
+
+<p>
+So, in order to achieve this, you should do:
+</p>
+<ol>
+<li class="level1"><div class="li"> Open Tiled</div>
+</li>
+<li class="level1"><div class="li"> Select the background Layer (eg: <em>grass</em>)</div>
+</li>
+<li class="level1"><div class="li"> Tiled → Layer → Layer Properties</div>
+</li>
+<li class="level1"><div class="li"> Add: cc_vertexz = -1000</div>
+</li>
+<li class="level1"><div class="li"> Select the foreground Layer (eg: <em>trees</em>)</div>
+</li>
+<li class="level1"><div class="li"> Tiled → Layer → Layer Properties</div>
+</li>
+<li class="level1"><div class="li"> Add: cc_vertexz = automatic</div>
+</li>
+</ol>
+
+<p>
+
+The other important thing to do is to draw your sprites with <code>GL_ALPHA_TEST</code> enabled. Example:
+
+</p>
+<pre class="code objc"><span class="co2">//MySprite is a subclass of CCSprite.</span>
+<span class="co2">// If you are drawing sprites using CCSpriteSheet, then you should subclass CCSpriteSheet and not CCSprite.</span>
+<span class="co2">// You can also enable GL_ALPHA_TEST globally, but if you do so, you need to comment the the CCTMXLayer#draw method (see CCTMXLayer.m)</span>
+<span class="co2">// There are other alternatives. This is just an example.</span>
+<span class="kw1">@implementation</span> MySprite
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> draw
+<span class="br0">{</span>
+   glEnable<span class="br0">(</span>GL_ALPHA_TEST<span class="br0">)</span>;
+   glAlphaFunc<span class="br0">(</span> GL_GREATER, <span class="nu0">0</span> <span class="br0">)</span>;
+   <span class="br0">[</span>super draw<span class="br0">]</span>;
+   glDisable<span class="br0">(</span>GL_ALPHA_TEST<span class="br0">)</span>;
+<span class="br0">}</span>
+<span class="kw1">@end</span></pre>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tiled_vertexz_automatic.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tiled_vertexz_automatic.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tiled_vertexz_automatic.png" class="media" alt="" width="190"></a><a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tiled_vertexz_-1000.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tiled_vertexz_-1000.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tiled_vertexz_-1000.png" class="media" alt="" width="180"></a>
+</p>
+
+<p>
+<strong>Q: How does cc_vertexz work ?</strong>
+</p>
+
+<p>
+<strong>A</strong>: cc_vertexz accepts either the word <em>automatic</em> or an integer number
+</p>
+<ul>
+<li class="level1"><div class="li"> If the value is a integer (negative or positive), then, that number will be used as the vertexZ value for all the tiles of that layer</div>
+</li>
+<li class="level1"><div class="li"> If the value is <em>automatic</em> then the first row of tiles will have a vertexZ value of -1, the second row will have a vertexZ value of -2, an so on.</div>
+</li>
+</ul>
+
+<p>
+The only thing left to do is to modify your sprites' <em>vertexZ</em> value according to its Y position. Example:
+
+</p>
+<pre class="code objc"><span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> repositionSprite<span class="sy0">:</span><span class="br0">(</span>ccTime<span class="br0">)</span>dt
+<span class="br0">{</span>
+	<span class="co2">// tile height is 101x81</span>
+	CGPoint p <span class="sy0">=</span> <span class="br0">[</span>sprite position<span class="br0">]</span>;
+	<span class="br0">[</span>sprite setVertexZ<span class="sy0">:</span> <span class="sy0">-</span><span class="br0">(</span> <span class="br0">(</span>p.y<span class="sy0">+</span><span class="nu0">81</span><span class="br0">)</span> <span class="sy0">/</span><span class="nu0">81</span><span class="br0">)</span> <span class="br0">]</span>;
+<span class="br0">}</span></pre>
+
+<p>
+Please, see <a href="http://code.google.com/p/cocos2d-iphone/source/browse/trunk/tests/TileMapTest.m" class="urlextern" title="http://code.google.com/p/cocos2d-iphone/source/browse/trunk/tests/TileMapTest.m" rel="nofollow">TileMapTest.m</a> for a working sample.
+</p>
+
+<p>
+<strong>Q: When should I use cc_alpha_func ?</strong>
+</p>
+
+<p>
+<strong>A</strong>: The <code>cc_alpha_func</code> value will only be used when <code>cc_vertexz=automatic</code>. By default it will have a value of 0. This value will be used to draw the tiles using the GL_GREATER function.
+This is how <code>CCTMXLayer</code> draws the tiles:
+
+</p>
+<pre class="code objc"><span class="co2">// CCTMXLayer drawing function</span>
+<span class="sy0">-</span><span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> draw
+<span class="br0">{</span>
+	<span class="kw1">if</span><span class="br0">(</span> useAutomaticVertexZ_ <span class="br0">)</span> <span class="br0">{</span>
+		glEnable<span class="br0">(</span>GL_ALPHA_TEST<span class="br0">)</span>;
+		glAlphaFunc<span class="br0">(</span>GL_GREATER, alphaFuncValue_<span class="br0">)</span>;
+	<span class="br0">}</span>
+&nbsp;
+	<span class="br0">[</span>super draw<span class="br0">]</span>;
+&nbsp;
+	<span class="kw1">if</span><span class="br0">(</span> useAutomaticVertexZ_ <span class="br0">)</span>
+		glDisable<span class="br0">(</span>GL_ALPHA_TEST<span class="br0">)</span>;
+<span class="br0">}</span></pre>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:cc_alpha_func.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:cc_alpha_func.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-cc_alpha_func.png" class="media" alt="" width="200"></a>
+</p>
+
+<p>
+Examples:
+</p>
+<div class="table sectionedit8"><table class="inline">
+	<tbody><tr class="row0">
+		<td class="col0" colspan="2"> <a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:vertexz_example.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:vertexz_example.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-vertexz_example.png" class="media" alt="" width="250"></a> </td><td class="col2" colspan="2"> Isometric vertex Z example. It has 2 layers: “trees” and “grass”. Uses cc_vertex=automatic for the “trees” layer. And cc_vertexz=-1000 for the “grass” layer. </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0" colspan="2"> <a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:vertexz_ortho_example.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:vertexz_ortho_example.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-vertexz_ortho_example.png" class="media" title=" " alt=" " width="250"></a> </td><td class="col2" colspan="2"> Orthogonal vertex example. It has 2 layers: “trees” and “grass”. It uses cc_vertexz=automatic and cc_alpha_func=0.5 for the “trees” layer. and cc_vertexz=-1000 for the “grass” layer. </td>
+	</tr>
+</tbody></table></div>
+
+</div>
+
+<h4><a name="using_multiple_tmx_layers_and_z-order" id="using_multiple_tmx_layers_and_z-order">Using multiple TMX Layers and z-order</a></h4>
+<div class="level4">
+
+<p>
+
+<img src="./prog_guide tiled_maps – cocos2d for iPhone_files/fixme.gif" class="middle" alt="FIXME">
+Information not available yet. But you can see a working example here: <a href="http://code.google.com/p/cocos2d-iphone/source/browse/trunk/tests/TileMapTest.m" class="urlextern" title="http://code.google.com/p/cocos2d-iphone/source/browse/trunk/tests/TileMapTest.m" rel="nofollow">TileMapTest.m</a>
+</p>
+
+<p>
+<a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:isometric_vertexz.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:isometric_vertexz.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-isometric_vertexz.png" class="media" alt="" width="250"></a>
+</p>
+
+</div>
+
+<h3 class="sectionedit9"><a name="screenshots" id="screenshots">Screenshots</a></h3>
+<div class="level3">
+<div class="table sectionedit10"><table class="inline">
+	<tbody><tr class="row0">
+		<td class="col0"><a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tmx_1.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tmx_1.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tmx_1.png" class="media" alt=""></a></td><td class="col1">Orthogonal map, with 3D projection and anti-aliased tiles. The tiles were “fixed” using the spritesheet-fixer tool. No artifacts appears even with a 3D projection and anti-aliased tiles</td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"><a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tmx_4.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tmx_4.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tmx_4.png" class="media" alt=""></a></td><td class="col1">Orthogonal map. map's tile size is smaller than the tiles</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"><a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tmx_2.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tmx_2.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tmx_2.png" class="media" alt=""></a></td><td class="col1">Isometric map, with 2D projection and aliased tiles</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"><a href="http://www.cocos2d-iphone.org/wiki/lib/exe/detail.php/prog_guide:tmx_3.png?id=prog_guide%3Atiled_maps" class="media" title="prog_guide:tmx_3.png"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide-tmx_3.png" class="media" alt=""></a></td><td class="col1">Hexagonal map, with 2D projection and aliased tiles. Edges are at the left-right. Bottom-top edges are not supported (yet)</td>
+	</tr>
+</tbody></table></div>
+
+</div>
+
+<h2 class="sectionedit11"><a name="pgu_tile_map_format" id="pgu_tile_map_format">PGU Tile Map Format</a></h2>
+<div class="level2">
+
+<p>
+
+You can use the PGU Tile maps, too.
+</p>
+
+<p>
+Since the format is not very flexible (is has limitations with it's sizes) and the editor seems to has some bugs, this format is deprecated.
+You will be able to continue using it with your old game, but it's usage is not recommended.
+</p>
+
+<p>
+Instead, use the recommened <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:tiled_maps#tmx_tile_map_format" title="prog_guide:tiled_maps ↵" class="wikilink1">TMX Tile Map</a>.
+</p>
+
+<p>
+Some articles about this format:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.cocos2d-iphone.org/archives/39" class="urlextern" title="http://www.cocos2d-iphone.org/archives/39" rel="nofollow">read/write in TileMapAtlas</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.cocos2d-iphone.org/archives/27" class="urlextern" title="http://www.cocos2d-iphone.org/archives/27" rel="nofollow">How to use the PGU tile editor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.cocos2d-iphone.org/archives/53" class="urlextern" title="http://www.cocos2d-iphone.org/archives/53" rel="nofollow">Plugin to generate PGU maps with the Tiled editor</a></div>
+</li>
+</ul>
+
+</div>
+
+	
+	
+			<div class="meta">
+			  <div class="user">
+			  			  </div>
+			  <div class="doc">
+			  prog_guide/tiled_maps.txt · Last modified: 2010/11/12 03:59 by admin			  </div>
+			</div>
+	
+	</div>
+        </div>
+      
+    
+
+
+     
+    <div id="trail">
+      <span class="bchead">Trace:</span> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:index" class="breadcrumbs" title="prog_guide:index">index</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_ease" class="breadcrumbs" title="prog_guide:actions_ease">actions_ease</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:effects" class="breadcrumbs" title="prog_guide:effects">effects</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:actions_special" class="breadcrumbs" title="prog_guide:actions_special">actions_special</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:animation" class="breadcrumbs" title="prog_guide:animation">animation</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:sprites" class="breadcrumbs" title="prog_guide:sprites">sprites</a> <span class="bcsep"></span> <a href="http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide:labels" class="breadcrumbs" title="prog_guide:labels">labels</a> <span class="bcsep"></span> <span class="curid"><a href="./prog_guide tiled_maps – cocos2d for iPhone_files/prog_guide tiled_maps – cocos2d for iPhone.htm" class="breadcrumbs" title="prog_guide:tiled_maps">tiled_maps</a></span>    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="headerinc">
+Dieses Dokuwiki verwendet ein von <a href="http://www.anymorphic.com/">Anymorphic Webdesign</a> erstelltes Thema.
+</div>
+
+<div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/cc-by-nc-sa.png" class="medialeft licbutton" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a> </div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="http://www.cocos2d-iphone.org/wiki/feed.php" title="Recent changes RSS feed"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+
+<div class="no"><img src="./prog_guide tiled_maps – cocos2d for iPhone_files/indexer.php" width="1" height="1" alt=""></div>
+
+
+</body></html>

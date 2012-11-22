@@ -1,0 +1,10 @@
+/*
+  low.css - styles for printing
+  Copyright (c) 2007 The Pragmatic Studio
+*/
+
+@import "/stylesheets/shared.css";
+
+.hidden-print, #navigation, #sidebar {
+  display: none;
+}
